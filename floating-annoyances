@@ -3,3 +3,6 @@ xda-developers.com##body > main > article > aside.w-quick-action-sidebar
 howtogeek.com##body > main > article > aside.w-quick-action-sidebar
 makeuseof.com##body > main > article > aside.w-quick-action-sidebar
 zdnet.com##.c-avStickyVideo:remove()
+
+setn.com##div.article_tool_wrap
+setn.com##section.page_tool_wrap
