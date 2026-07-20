@@ -7,3 +7,5 @@ androidpolice.com###article-body > div > div.w-display-card-vignette
 
 aljazeera.com##div.nudge
 theguardian.com##aside[aria-label="newsletter promotion"]
+
+medium.com##p:has-text(Join Medium for free):upward(2)
