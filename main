@@ -3,7 +3,7 @@
 ! Description: Blocks stuff that annoys me.
 ! Expires: 1 day
 
-!#include https://raw.githubusercontent.com/johan456789/content-filter/refs/heads/main/floating-annoyances
-!#include https://raw.githubusercontent.com/johan456789/content-filter/refs/heads/main/inline-promo
-!#include https://raw.githubusercontent.com/johan456789/content-filter/refs/heads/main/inline-related-articles
-!#include https://raw.githubusercontent.com/johan456789/content-filter/refs/heads/main/slippped-thru-ads
+!#include floating-annoyances
+!#include inline-promo
+!#include inline-related-articles
+!#include slippped-thru-ads
