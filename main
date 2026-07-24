@@ -1,0 +1,9 @@
+! Title: Tsung-Han Yu's Custom Filter List
+! Homepage: https://github.com/johan456789/content-filter
+! Description: Blocks stuff that annoys me.
+! Expires: 1 day
+
+!#include https://raw.githubusercontent.com/johan456789/content-filter/refs/heads/main/floating-annoyances
+!#include https://raw.githubusercontent.com/johan456789/content-filter/refs/heads/main/inline-promo
+!#include https://raw.githubusercontent.com/johan456789/content-filter/refs/heads/main/inline-related-articles
+!#include https://raw.githubusercontent.com/johan456789/content-filter/refs/heads/main/slippped-thru-ads
