@@ -9,3 +9,5 @@ aljazeera.com##div.nudge
 theguardian.com##aside[aria-label="newsletter promotion"]
 
 medium.com##p:has-text(Join Medium for free):upward(2)
+
+bnext.com.tw###article div.support-box.pumpkinbanner.bnextmeida-banner.adbox
