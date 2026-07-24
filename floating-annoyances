@@ -6,3 +6,6 @@ zdnet.com##.c-avStickyVideo:remove()
 
 setn.com##div.article_tool_wrap
 setn.com##section.page_tool_wrap
+bnext.com.tw###article > div > div.left > div > div.share.relative.hidden.lg\:flex.items-start > div > div
+bnext.com.tw##article div.share:style(visibility: hidden !important;)
+bnext.com.tw###aaabar
