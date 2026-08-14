@@ -1,8 +1,8 @@
 # ublock-rule-gen
 
-Turn "this element on this page annoys me" into a ready-to-paste uBlock Origin rule.
+Turn "this element on this page annoys me" into a uBlock Origin rule stored in this repo's filter list.
 **Input:** a URL, optionally + a screenshot (with or without an annotation circle) or a text description of the annoying element.
-**Output:** a `domain##selector` uBlock cosmetic filter (plus variants), ready to paste into uBlock's "My filters".
+**Output:** a `domain##selector` uBlock cosmetic filter (plus variants), appended to the matching local filter file.
 
 **The user never pastes HTML or element selectors.** If they do, that's the legacy flow — just make their selector robust and return a rule.
 
@@ -76,16 +76,28 @@ bun scripts/harvest.mjs validate <url> 'domain##selector'
 - For `:has-text()`/`:style()` rules (can't validate in browser), validate the CSS selector part and reason about the pseudo manually.
 - Iterate until correct.
 
-### 6. Deliver
+### 6. Deliver — append to the local filter list
 
-Final answer format (see `prompts/robust-rule.md` §7):
+The rule goes into one of the category files (grouped by annoyance type):
+
+- `floating-annoyances` — sticky/floating widgets, share/social bars
+- `inline-promo` — in-article promos, newsletter nudges
+- `inline-related-articles` — related-article cards
+- `slippped-thru-ads` — ads that slipped through
+
+Append the rule (the robust selector + `:style()` variant, see `prompts/robust-rule.md` §7) to the matching file. If no category fits, **ask the user for approval** before creating a new file (and adding its `!#include` to `main`).
+
+Then commit with conventional commits using `type(domain)` scope:
 
 ```
-domain##robust-selector
-domain##robust-selector:style(display: none !important;)
+feat(example.com): add floating share bar filter
+fix(example.com): update share bar selector
 ```
 
-Plus one fallback and a 1–2 sentence rationale (what you anchored on, what you avoided). The user will paste the rule into uBlock's My Filters.
+- Add = `feat`, updating an existing selector = `fix`.
+- If a commit touches multiple domains, use the primary domain; omit the scope only for list-level changes (e.g. `main` metadata).
+
+Rationale (1–2 sentences on what you anchored on / avoided) goes in the commit body or the reply to the user.
 
 ## Constraints & failure handling
 
