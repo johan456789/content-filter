@@ -1,0 +1,12 @@
+{
+  "name": "ublock-rule-gen",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "harvest": "bun scripts/harvest.mjs"
+  },
+  "dependencies": {
+    "playwright": "^1.62.1"
+  }
+}
