@@ -11,3 +11,4 @@ bnext.com.tw##article div.share:style(visibility: hidden !important;)
 bnext.com.tw###aaabar
 bnext.com.tw###article div[x-data="social_share"]
 bnext.com.tw##div.main-body-content > nav.topic-menu.mobile:style(display: none !important;)
+commonhealth.com.tw##div.social-bar-wrap
