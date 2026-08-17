@@ -1,0 +1,36 @@
+name: Build filter list
+
+on:
+  push:
+    branches: [main]
+    paths: ['filters/**']
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Build combined filter list
+        run: |
+          # Extract header (lines before first !#include)
+          sed -n '1,/!#include/{/!#include/!p}' filters/main.txt > main.txt
+
+          # Parse !#include directives in order, append each file
+          grep '^!#include' filters/main.txt | while read -r line; do
+            file=$(echo "$line" | sed 's/^!#include *//')
+            echo "" >> main.txt
+            cat "filters/$file" >> main.txt
+          done
+
+      - name: Deploy to gh-pages
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: .
+          include_files: main.txt
+          force_orphan: true
