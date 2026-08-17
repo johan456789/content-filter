@@ -8,3 +8,5 @@ zdnet.com##p:has(strong)
 bnext.com.tw##.htmlview.article-content blockquote
 
 aljazeera.com##section.more-on
+
+tw.stock.yahoo.com##.recommendation-contents
