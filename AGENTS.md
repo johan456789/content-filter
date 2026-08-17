@@ -78,14 +78,14 @@ bun scripts/harvest.mjs validate <url> 'domain##selector'
 
 ### 6. Deliver — append to the local filter list
 
-The rule goes into one of the category files (grouped by annoyance type):
+The rule goes into one of the category files in `filters/` (grouped by annoyance type):
 
-- `floating-annoyances` — sticky/floating widgets, share/social bars
-- `inline-promo` — in-article promos, newsletter nudges
-- `inline-related-articles` — related-article cards
-- `slippped-thru-ads` — ads that slipped through
+- `filters/floating-annoyances.txt` — sticky/floating widgets, share/social bars
+- `filters/inline-promo.txt` — in-article promos, newsletter nudges
+- `filters/inline-related-articles.txt` — related-article cards
+- `filters/slippped-thru-ads.txt` — ads that slipped through
 
-Append the rule (the robust selector + `:style()` variant, see `prompts/robust-rule.md` §7) to the matching file. If no category fits, **ask the user for approval** before creating a new file (and adding its `!#include` to `main`).
+Append the rule (the robust selector + `:style()` variant, see `prompts/robust-rule.md` §7) to the matching file. If no category fits, **ask the user for approval** before creating a new file (and adding its `!#include` to `filters/main.txt`).
 
 Then commit with conventional commits using `type(domain)` scope:
 
