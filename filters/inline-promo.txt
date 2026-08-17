@@ -13,3 +13,9 @@ medium.com##p:has-text(Join Medium for free):upward(2)
 bnext.com.tw###article div.support-box.pumpkinbanner.bnextmeida-banner.adbox
 
 futurism.com##.newsletter-content
+
+digitalcameraworld.com##.newsletter-form__wrapper.newsletter-form__wrapper--inbodyContent
+techradar.com##.newsletter-form__wrapper.newsletter-form__wrapper--inbodyContent
+androidcentral.com##.newsletter-form__wrapper.newsletter-form__wrapper--inbodyContent
+variety.com###offer_e15edb56dc7025063457-0
+androidauthority.com##.e_6o
