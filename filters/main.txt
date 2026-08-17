@@ -3,7 +3,7 @@
 ! Description: Blocks stuff that annoys me.
 ! Expires: 1 day
 
-!#include floating-annoyances
-!#include inline-promo
-!#include inline-related-articles
-!#include slippped-thru-ads
+!#include floating-annoyances.txt
+!#include inline-promo.txt
+!#include inline-related-articles.txt
+!#include slippped-thru-ads.txt
