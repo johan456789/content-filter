@@ -99,6 +99,18 @@ fix(example.com): update share bar selector
 
 Rationale (1–2 sentences on what you anchored on / avoided) goes in the commit body or the reply to the user.
 
+### 7. Show before/after screenshots (MANDATORY)
+
+After committing, take **cropped** before/after screenshots showing the element:
+
+1. Navigate to the page and scroll so the target element is visible in the viewport
+2. Take a **before** screenshot cropped to the relevant area (viewport only, not full-page)
+3. Hide the element with JavaScript: `document.querySelector('<selector>').style.display = 'none'`
+4. Take an **after** screenshot from the same scroll position, same crop
+5. Upload both to the thread
+
+This gives the user a clear visual confirmation the filter works.
+
 ## Constraints & failure handling
 
 - **Login walls / consent dialogs / Cloudflare**: try dismissing common dialogs first; if the page is unusable headless, ask the user to paste the element's outerHTML (legacy flow) or use the user's real browser via the playwriter skill.
