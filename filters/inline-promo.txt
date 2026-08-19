@@ -19,3 +19,6 @@ techradar.com##.newsletter-form__wrapper.newsletter-form__wrapper--inbodyContent
 androidcentral.com##.newsletter-form__wrapper.newsletter-form__wrapper--inbodyContent
 variety.com###offer_e15edb56dc7025063457-0
 androidauthority.com##.e_6o
+androidauthority.com##div:has(> a[data-sel="db-link-el"])
+androidauthority.com##div:has(> p > a[href*="external-links"])
+androidauthority.com##div:has(> a[title="Follow us on Google Discover"])
