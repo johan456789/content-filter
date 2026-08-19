@@ -60,3 +60,7 @@ www.threads.com##.x1ey2m1c.xtijo5x.x1o0tod.xixxii4.x13vifvy.x5hsz1j.x1u6grsq.xqc
 www.threads.com##.x78zum5.xdt5ytf.xg6iff7.xippug5.x1n2onr6
 hk.finance.yahoo.com##.primary-btn.fin-size-large.tw-p-4.tw-rounded-md.yf-r7dg9i
 techcrunch.com##.wp-block-techcrunch-breaking-news-banner
+
+mobile01.com##div.l-heading > div.l-heading__title > ul.l-toolBar
+mobile01.com##div.docking_share
+mobile01.com##div.o-gotop
