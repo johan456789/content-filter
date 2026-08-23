@@ -2,7 +2,7 @@
 
 Turn "this element on this page annoys me" into a uBlock Origin rule stored in this repo's filter list.
 **Input:** a URL, optionally + a screenshot (with or without an annotation circle) or a text description of the annoying element.
-**Output:** a `domain##selector` uBlock cosmetic filter (plus variants), appended to the matching local filter file.
+**Output:** a `domain##selector` uBlock cosmetic filter appended to the matching local filter file. Emit one rule by default — add a `:style(...)` variant or fallback only when you can name a concrete reason (inline `display` style, JS re-injection, etc.). See `prompts/robust-rule.md` §7.
 
 **The user never pastes HTML or element selectors.** If they do, that's the legacy flow — just make their selector robust and return a rule.
 

@@ -56,9 +56,21 @@ Produce the most robust uBlock Origin cosmetic filter. "Robust" = survives site 
 
 ## 7. Output format (final answer to user)
 
-```
-domain##robust-selector
-domain##robust-selector:style(display: none !important;)
-```
+Default: one rule. Emit **only** what the situation actually needs:
 
-Plus one fallback (attribute-based or `:has()` variant) and 1–2 sentence rationale: what you anchored on and what you deliberately avoided (dynamic classes, layout chain).
+- `domain##selector` — the plain cosmetic filter. This is the default and is sufficient when:
+  - the element has no inline `style="display: ..."` that would override `display: none`
+  - the element is not re-injected by site JS on scroll/route change (verify by scrolling, changing route, and re-querying)
+
+Do **not** append a `:style()` duplicate by reflex. It only helps when one of:
+- the site re-adds the element after removal (IntersectionObserver, route handler, etc.)
+- the element or an ancestor has inline `style="display: ..."` that beats `display: none`
+- the element is a sticky/fixed widget whose visibility is toggled by JS, and you need to defeat the toggle
+
+If a `:style()` variant is genuinely needed, emit it **instead of** the plain rule — not in addition. (Two rules that hide the same thing create noise and one of them is dead weight.)
+
+Same rule for fallbacks: do not emit a `[class*="..."]` or `:has(...)` fallback by default. A fallback is only justified when:
+- the primary selector is fragile in a way you can name (framework class churn, versioned suffix)
+- the fallback targets a *different* element that would also need hiding, with a concrete reason
+
+One primary rule, one short rationale. Do not list "what you anchored on AND what you avoided" — that invites padding. One sentence on the anchor is enough.
