@@ -113,7 +113,7 @@ This gives the user a clear visual confirmation the filter works.
 
 ## Constraints & failure handling
 
-- **Login walls / consent dialogs / Cloudflare**: try dismissing common dialogs first; if the page is unusable headless, ask the user to paste the element's outerHTML (legacy flow) or use the user's real browser via the playwriter skill.
+- **Login walls / consent dialogs / Cloudflare / anti-bot blocks (e.g. Akamai 403)**: try dismissing common dialogs first; if the page is still unusable headless, escalate in this order — (1) `playwright-cli` with `--headed --device='Pixel 7'` (or similar mobile device) to bypass headless fingerprinting and serve mobile-only markup, (2) ask the user to paste the element's outerHTML (legacy flow), (3) the playwriter skill as a last resort.
 - **CAPTCHA challenges**: if the browser hits a CAPTCHA (e.g. Akamai tile-match) while taking screenshots or inspecting a page, **stop immediately and report it** — do not attempt to solve, click through, or otherwise circumvent the CAPTCHA. Note what was completed before the block and ask the user how to proceed.
 - **Don't ask the user to resize anything.** Screenshot ↔ coordinates mapping only works on harvest.mjs screenshots at the documented viewports.
 - **The rule must be domain-scoped** (never `##sel` global, never `||` network filters — this is cosmetic filtering only).
