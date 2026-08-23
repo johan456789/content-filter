@@ -67,3 +67,5 @@ mobile01.com##div.o-gotop
 mobile01.com##.app-open-btn
 
 tomsguide.com###skinnyBanner
+
+cna.com.tw##.articleTopBtnBox
