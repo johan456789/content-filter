@@ -1,7 +1,7 @@
 # ublock-rule-gen
 
 Turn "this element on this page annoys me" into a uBlock Origin rule stored in this repo's filter list.
-**Input:** a URL, optionally + a screenshot (with or without an annotation circle) or a text description of the annoying element.
+**Input:** a URL, plus usually **screenshots sent by the user** (often with an annotation circle drawn on them) and/or a text description of the annoying element.
 **Output:** a `domain##selector` uBlock cosmetic filter appended to the matching local filter file. Emit one rule by default — add a `:style(...)` variant or fallback only when you can name a concrete reason (inline `display` style, JS re-injection, etc.). See `prompts/robust-rule.md` §7.
 
 **The user never pastes HTML or element selectors.** If they do, that's the legacy flow — just make their selector robust and return a rule.
@@ -15,7 +15,7 @@ bunx playwright install chromium   # if browsers are not cached
 
 ## The workflow
 
-### 1. Take screenshots (fixed viewports)
+### 1. Take canonical screenshots (fixed viewports)
 
 ```bash
 bun scripts/harvest.mjs screenshot <url> --viewport=desktop --out=tmp/
@@ -27,23 +27,23 @@ bun scripts/harvest.mjs screenshot <url> --viewport=mobile --out=tmp/
 - The script lazy-scrolls the page first so lazy-loaded content is present.
 - It also saves the **full page HTML** (`tmp/<domain>-<viewport>.html`) — read this to understand the page before designing selectors.
 - If the element might be below the fold, also take `--full` (full-page screenshot) for desktop.
-- Upload the screenshots to the thread so the user can see them.
+
+**Why this step even when the user already sent a screenshot:** the user's screenshot is likely at a different size/scale (a phone capture, an arbitrary browser window). It tells you *which element* to block; this canonical screenshot gives you *exact coordinates* that `find` can consume. Do **not** upload these for the user to annotate — the user annotates their own copy. These are only used internally for coordinate mapping and for the before/after in step 7.
 
 ### 2. Locate the annoying element
 
 Three paths, in order of preference:
 
-**A. User already annotated a screenshot** (circled the element):
-```bash
-bun scripts/harvest.mjs diff tmp/<original>.png /path/to/annotated.png
-```
-The output `center` is the pixel point to use. **Warn the user first: don't resize/crop the screenshot, just draw on it and re-upload.**
+**A. User sent an annotated screenshot directly** (they circled/described the element themselves — no agent screenshot precedes it):
+1. **Read the annotated screenshot with vision** — use the `eyes` subagent (or your own vision) to understand *which element* is targeted: its role, where it sits on the page (e.g. "sticky top nav", "share widget bottom-right"), and any text/visual cues.
+2. Take the canonical desktop/mobile screenshots from step 1, then **locate the same element on the agent's screenshot** (vision again, or match by the description you extracted). Estimate its center pixel **in the canonical viewport**.
+3. Run `find` at that point (step 3) to confirm. **Warn the user:** coordinate mapping only works at the documented viewports, so don't resize/crop their screenshot. If their annotated image happens to be at an exact harvest viewport size, you may instead skip step 2.2 and run `bun scripts/harvest.mjs diff tmp/<original>.png /path/to/annotated.png` to get the pixel point directly.
 
 **B. User gave a text description** ("the sticky nav at the top", "the share widget on the right"):
-- Look at the screenshots you took, locate the region, estimate the center pixel of the element.
+- Look at the canonical screenshots, locate the region, estimate the center pixel of the element.
 - Run `find` at that point, inspect the chain, and confirm the described element is there. If ambiguous, pick 2–3 candidates and ask the user (one round trip).
 
-**C. Nothing provided**: ask the user to circle the element on one of the screenshots you uploaded (tell them not to resize/crop) — or describe it. Do not guess.
+**C. Nothing provided**: ask the user to send a screenshot with the element circled (tell them not to resize/crop) — or describe it. Do not guess.
 
 ### 3. Dump the ancestor chain
 
