@@ -12,3 +12,4 @@ aljazeera.com##section.more-on
 tw.stock.yahoo.com##.recommendation-contents
 
 tomsguide.com##aside[data-component-name="Recirculation:ArticleRiver"]
+androidcentral.com##aside:has-text(/you may like/i)

@@ -26,3 +26,4 @@ androidauthority.com##div:has(> a[title="Follow us on Google Discover"])
 gq.com.tw##figure[data-testid="cne-interlude-container"]
 
 techbang.com##div.newsletter2in1
+androidcentral.com##.vid-present
