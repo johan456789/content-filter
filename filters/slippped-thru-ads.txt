@@ -22,3 +22,6 @@ health.gvm.com.tw##.top-ad-box
 vogue.com.tw##.AdWrapper-fGiLaV.iGDxYx.ad.ad--hero.should-hold-space
 thetvdb.com###ATF
 politico.eu##.ad__mobile.sticky-footer
+
+searchenginejournal.com##.middle_p_txt
+searchenginejournal.com###sspcat_ifrm_v2
