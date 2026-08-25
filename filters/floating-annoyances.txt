@@ -71,3 +71,4 @@ tomsguide.com###skinnyBanner
 cna.com.tw##.articleTopBtnBox
 
 theguardian.com##aside:has(> gu-island[name="StickyBottomBanner"])
+androidcentral.com##section#upnext-ribbon
