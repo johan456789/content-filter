@@ -27,3 +27,6 @@ searchenginejournal.com##.middle_p_txt
 searchenginejournal.com###sspcat_ifrm_v2
 searchenginejournal.com###sej-hello-bar
 tw.news.yahoo.com###sda-top-center-iframe
+
+hk01.com###leaderboard
+hk01.com##.lazyload-wrapper:has(#in_article)
