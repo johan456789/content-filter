@@ -69,6 +69,7 @@ mobile01.com##.app-open-btn
 tomsguide.com###skinnyBanner
 
 cna.com.tw##.articleTopBtnBox
+cna.com.tw##.line-ad
 
 theguardian.com##aside:has(> gu-island[name="StickyBottomBanner"])
 androidcentral.com##section#upnext-ribbon
