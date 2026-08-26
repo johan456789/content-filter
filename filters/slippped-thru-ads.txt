@@ -26,3 +26,4 @@ politico.eu##.ad__mobile.sticky-footer
 searchenginejournal.com##.middle_p_txt
 searchenginejournal.com###sspcat_ifrm_v2
 searchenginejournal.com###sej-hello-bar
+tw.news.yahoo.com###sda-top-center-iframe
