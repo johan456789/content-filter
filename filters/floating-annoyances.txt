@@ -70,6 +70,7 @@ tomsguide.com###skinnyBanner
 
 cna.com.tw##.articleTopBtnBox
 cna.com.tw##.line-ad
+cna.com.tw##.language-bar
 
 theguardian.com##aside:has(> gu-island[name="StickyBottomBanner"])
 androidcentral.com##section#upnext-ribbon
