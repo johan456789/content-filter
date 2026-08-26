@@ -29,4 +29,4 @@ searchenginejournal.com###sej-hello-bar
 tw.news.yahoo.com###sda-top-center-iframe
 
 hk01.com###leaderboard
-hk01.com##.lazyload-wrapper:has(#in_article)
+hk01.com##article#article-content-section > div:has(#in_article)
