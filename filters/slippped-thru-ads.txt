@@ -30,3 +30,5 @@ tw.news.yahoo.com###sda-top-center-iframe
 
 hk01.com###leaderboard
 hk01.com##article#article-content-section > div:has(#in_article)
+
+nownews.com##.adBlk.ad-head
