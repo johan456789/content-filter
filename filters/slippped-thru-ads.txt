@@ -39,3 +39,9 @@ gizmochina.com##.code-block-6
 
 businessweekly.com.tw##ins.ins-top-cover
 businessweekly.com.tw##.Single-article .Google-special
+
+ithome.com.tw###skybanner
+ithome.com.tw###headerbar
+ithome.com.tw###block-block-33
+ithome.com.tw###block-block-4
+ithome.com.tw##div.side-extra
