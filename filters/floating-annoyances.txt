@@ -79,3 +79,5 @@ androidcentral.com###click-to-next-container
 businessweekly.com.tw##.Single-sidebar
 businessweekly.com.tw##.red_envelope_wrap
 businessweekly.com.tw##.Single-top-icon
+
+3c.ltn.com.tw##div:has(> a.sharefb)
