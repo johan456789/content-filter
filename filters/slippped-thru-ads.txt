@@ -34,3 +34,5 @@ hk01.com##article#article-content-section > div:has(#in_article)
 nownews.com##.adBlk.ad-head
 
 m.gsmarena.com##div.adv-mid
+
+gizmochina.com##.code-block-6
