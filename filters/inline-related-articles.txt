@@ -14,3 +14,5 @@ tw.stock.yahoo.com##.recommendation-contents
 tomsguide.com##aside[data-component-name="Recirculation:ArticleRiver"]
 androidcentral.com##aside:has-text(/you may like/i)
 tw.news.yahoo.com##.recommendation-contents
+
+bbc.com##section[data-e2e="recommendations-heading"]
