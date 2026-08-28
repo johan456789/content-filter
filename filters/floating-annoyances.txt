@@ -75,3 +75,6 @@ cna.com.tw##.language-bar
 theguardian.com##aside:has(> gu-island[name="StickyBottomBanner"])
 androidcentral.com##section#upnext-ribbon
 androidcentral.com###click-to-next-container
+
+businessweekly.com.tw##.Single-sidebar
+businessweekly.com.tw##.red_envelope_wrap
