@@ -36,3 +36,6 @@ nownews.com##.adBlk.ad-head
 m.gsmarena.com##div.adv-mid
 
 gizmochina.com##.code-block-6
+
+businessweekly.com.tw##ins.ins-top-cover
+businessweekly.com.tw##.Single-article .Google-special
