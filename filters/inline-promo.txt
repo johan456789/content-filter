@@ -31,3 +31,4 @@ androidcentral.com##.vid-present
 cna.com.tw##.lineAd
 cna.com.tw##.gmailNews
 inside.com.tw##p.ck-section:has(a[href*="insider/newsletter"])
+businessweekly.com.tw##.Highlight-left
