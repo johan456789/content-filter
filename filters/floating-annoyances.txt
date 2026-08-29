@@ -81,3 +81,5 @@ businessweekly.com.tw##.red_envelope_wrap
 businessweekly.com.tw##.Single-top-icon
 
 3c.ltn.com.tw##div:has(> a.sharefb)
+udn.com##aside.article-content__social
+udn.com##section.article-content__plugins
