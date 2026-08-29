@@ -29,3 +29,4 @@ techbang.com##div.newsletter2in1
 androidcentral.com##.vid-present
 
 cna.com.tw##.lineAd
+cna.com.tw##.gmailNews
