@@ -43,6 +43,7 @@ blog.collinsdictionary.com###ast-scroll-top
 aljazeera.com##.navigation-bar-container.u-bottom-border
 aljazeera.com##.menu.navigation-bar__menu.navigation-bar__menu-first-item-header
 tomshardware.com###bannerHeader
+tomshardware.com##div[id*="membership-expandable-banner"]
 techradar.com###bannerHeader
 variety.com###piano-module-header-link-mobile-sticky-vy > .tp-container-inner
 gnn.gamer.com.tw##div.open-app:nth-of-type(3) > .open-app__content > a.open-app__link:nth-of-type(1)
