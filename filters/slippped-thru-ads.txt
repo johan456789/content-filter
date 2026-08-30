@@ -50,3 +50,4 @@ ithome.com.tw##div.side-extra
 3c.ltn.com.tw##div[id^="ad-"][id*="IR1"], p.before_ir
 udn.com##div.inline-ads
 inside.com.tw##div.ad-content
+mirrormedia.mg##div[class*="gpt-placeholder__Container"]:has(div[id*="_HD"])

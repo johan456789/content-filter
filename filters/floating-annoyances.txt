@@ -85,3 +85,5 @@ businessweekly.com.tw##.Single-top-icon
 3c.ltn.com.tw##div:has(> a.sharefb)
 udn.com##aside.article-content__social
 udn.com##section.article-content__plugins
+mirrormedia.mg##div[class*="promote-topic-swiper__Wrapper"]
+mirrormedia.mg##div[class*="SocialMediaAndDonateLink"]
