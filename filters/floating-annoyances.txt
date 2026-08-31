@@ -87,3 +87,4 @@ udn.com##aside.article-content__social
 udn.com##section.article-content__plugins
 mirrormedia.mg##div[class*="promote-topic-swiper__Wrapper"]
 mirrormedia.mg##div[class*="SocialMediaAndDonateLink"]
+mirrordaily.news##.z-story-share-bar
