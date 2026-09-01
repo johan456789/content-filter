@@ -18,3 +18,5 @@ tw.news.yahoo.com##.recommendation-contents
 
 bbc.com##section[data-e2e="recommendations-heading"]
 bbc.com##section[data-e2e="article-links-block"]
+
+cna.com.tw##.insertGroup
