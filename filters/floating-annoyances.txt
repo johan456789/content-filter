@@ -90,3 +90,4 @@ mirrormedia.mg##div[class*="SocialMediaAndDonateLink"]
 mirrordaily.news##.z-story-share-bar
 mirrormedia.mg##[class*="article-right-arrow"]
 tw.news.yahoo.com##[id^="share-button-group-"]
+hypesphere.com##.simplefavorite
