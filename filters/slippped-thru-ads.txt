@@ -53,3 +53,5 @@ inside.com.tw##div.ad-content
 mirrormedia.mg##div[class*="gpt-placeholder__Container"]:has(div[id*="_HD"])
 
 gq.com.tw##[data-testid="sticky-hero-ad"]
+
+techorange.com##div[data-elementor-type="single-post"] > .elementor-hidden-desktop.e-parent
