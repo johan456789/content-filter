@@ -1,0 +1,217 @@
+! Title: Tsung-Han Yu's Custom Filter List
+! Homepage: https://github.com/johan456789/content-filter
+! Description: Blocks stuff that annoys me.
+! Expires: 1 day
+
+
+androidpolice.com##body > main > article > aside.w-quick-action-sidebar
+xda-developers.com##body > main > article > aside.w-quick-action-sidebar
+howtogeek.com##body > main > article > aside.w-quick-action-sidebar
+makeuseof.com##body > main > article > aside.w-quick-action-sidebar
+pocket-lint.com##aside.w-quick-action-sidebar
+zdnet.com##.c-avStickyVideo:remove()
+
+setn.com##div.article_tool_wrap
+setn.com##section.page_tool_wrap
+bnext.com.tw###article > div > div.left > div > div.share.relative.hidden.lg\:flex.items-start > div > div
+bnext.com.tw##article div.share:style(visibility: hidden !important;)
+bnext.com.tw###aaabar
+bnext.com.tw###article div[x-data="social_share"]
+bnext.com.tw##div.main-body-content > nav.topic-menu.mobile:style(display: none !important;)
+commonhealth.com.tw##div.social-bar-wrap
+def.ltn.com.tw##.softPush_notification
+
+ec.ltn.com.tw###top
+ec.ltn.com.tw##.softPush_notification
+ec.ltn.com.tw##[href*="javascript:void(0);"]
+3c.ltn.com.tw###top
+3c.ltn.com.tw##.softPush_notification
+3c.ltn.com.tw##[href*="javascript:void(0);"]
+news.ltn.com.tw###top
+news.ltn.com.tw###marquee
+news.ltn.com.tw###marqueeHeader
+health.ltn.com.tw###top
+health.ltn.com.tw##.softPush_notification
+health.ltn.com.tw##[href*="javascript\:void\(0\)\;"]
+talk.ltn.com.tw##[href*="javascript\:void\(0\)\;"]
+udn.com###gotop
+udn.com##.i-arrow5-up
+reading.udn.com###sticky-side-banner-widget
+ubrand.udn.com##.goTop.show
+chinatimes.com##.gotop
+ctee.com.tw##.sticky-btn.revealed
+finance.ettoday.net###back-top
+health.gvm.com.tw###gotop
+pbxscience.com###scroll-up
+newtalk.tw###goTop
+ifans.com.tw###scroll-up
+holyisland.blog###scroll-to-top
+blog.collinsdictionary.com###ast-scroll-top
+aljazeera.com##.navigation-bar-container.u-bottom-border
+aljazeera.com##.menu.navigation-bar__menu.navigation-bar__menu-first-item-header
+tomshardware.com###bannerHeader
+tomshardware.com##div[id*="membership-expandable-banner"]
+techradar.com###bannerHeader
+variety.com###piano-module-header-link-mobile-sticky-vy > .tp-container-inner
+gnn.gamer.com.tw##div.open-app:nth-of-type(3) > .open-app__content > a.open-app__link:nth-of-type(1)
+m.gamer.com.tw##.open-app
+sterlingsky.ca###leadbox-iframe
+playpcesor.com###ztb-slide-box-widget
+lucumr.pocoo.org###header-canvas
+lucumr.pocoo.org###footer-canvas
+blog.gskinner.com##div._icon.wp-dark-mode-ignore:nth-of-type(2)
+money101.com.tw###ada-button-frame
+pinterest.com##.ADXRXN.aHn_t7.bnBtRO.n62I2n
+www.threads.com##.x6s0dn4.x78zum5.xdt5ytf.xl56j7k.xsag5q8.x13jy36j.x64bnmy.x1miatn0
+www.threads.com##.x1uvtmcs.x4k7w5x.x1h91t0o.x1beo9mf.xaigb6o.x12ejxvf.x3igimt.xarpa2k.xedcshv.x1lytzrv.x1t2pt76.x7ja8zs.x1n2onr6.x1qrby5j.x1jfb8zj
+www.threads.com##.x1ey2m1c.xtijo5x.x1o0tod.xixxii4.x13vifvy.x5hsz1j.x1u6grsq.xqcmdr3.x4hg4is.xwv1ft4
+www.threads.com##.x78zum5.xdt5ytf.xg6iff7.xippug5.x1n2onr6
+hk.finance.yahoo.com##.primary-btn.fin-size-large.tw-p-4.tw-rounded-md.yf-r7dg9i
+techcrunch.com##.wp-block-techcrunch-breaking-news-banner
+
+mobile01.com##div.l-heading > div.l-heading__title > ul.l-toolBar
+mobile01.com##div.docking_share
+mobile01.com##div.o-gotop
+mobile01.com##.app-open-btn
+
+tomsguide.com###skinnyBanner
+
+cna.com.tw##.articleTopBtnBox
+cna.com.tw##.line-ad
+cna.com.tw##.language-bar
+
+theguardian.com##aside:has(> gu-island[name="StickyBottomBanner"])
+androidcentral.com##section#upnext-ribbon
+androidcentral.com###click-to-next-container
+
+businessweekly.com.tw##.Single-sidebar
+businessweekly.com.tw##.red_envelope_wrap
+businessweekly.com.tw##.Single-top-icon
+
+3c.ltn.com.tw##div:has(> a.sharefb)
+udn.com##aside.article-content__social
+udn.com##section.article-content__plugins
+mirrormedia.mg##div[class*="promote-topic-swiper__Wrapper"]
+mirrormedia.mg##div[class*="SocialMediaAndDonateLink"]
+mirrordaily.news##.z-story-share-bar
+mirrormedia.mg##[class*="article-right-arrow"]
+tw.news.yahoo.com##[id^="share-button-group-"]
+hypesphere.com##.simplefavorite
+ithome.com.tw###block-block-22
+
+xda-developers.com###article-body div.promotion-offer-box
+xda-developers.com###article-body aside.w-promotion-offer
+makeuseof.com###article-body aside.w-promotion-offer
+businessinsider.com##section.post-page-container div.follow-topic-inline-signup.component-loaded
+businessinsider.com##section.post-page-container div.dynamic-module.component-loaded
+androidpolice.com###article-body > div > div.w-display-card-vignette
+
+aljazeera.com##div.nudge
+theguardian.com##aside[aria-label="newsletter promotion"]
+
+medium.com##p:has-text(Join Medium for free):upward(2)
+
+bnext.com.tw###article div.support-box.pumpkinbanner.bnextmeida-banner.adbox
+
+futurism.com##.newsletter-content
+
+digitalcameraworld.com##.newsletter-form__wrapper.newsletter-form__wrapper--inbodyContent
+techradar.com##.newsletter-form__wrapper.newsletter-form__wrapper--inbodyContent
+androidcentral.com##.newsletter-form__wrapper.newsletter-form__wrapper--inbodyContent
+variety.com###offer_e15edb56dc7025063457-0
+androidauthority.com##.e_6o
+androidauthority.com##div:has(> a[data-sel="db-link-el"])
+androidauthority.com##div:has(> p > a[href*="external-links"])
+androidauthority.com##div:has(> a[title="Follow us on Google Discover"])
+
+gq.com.tw##figure[data-testid="cne-interlude-container"]
+
+techbang.com##div.newsletter2in1
+androidcentral.com##.vid-present
+
+cna.com.tw##.lineAd
+cna.com.tw##.gmailNews
+inside.com.tw##p.ck-section:has(a[href*="insider/newsletter"])
+businessweekly.com.tw##.Highlight-left
+techcrunch.com##.jw-player-inline-promo
+
+xda-developers.com###article-body > div > div.display-card
+xda-developers.com###article-body > div > aside.display-card
+androidpolice.com###article-body > div > aside.display-card
+howtogeek.com###article-body > div > aside.display-card
+makeuseof.com###article-body > div > aside.display-card
+windowscentral.com###article-body aside
+zdnet.com##p:has(strong)
+bnext.com.tw##.htmlview.article-content blockquote
+
+aljazeera.com##section.more-on
+
+tw.stock.yahoo.com##.recommendation-contents
+
+tomshardware.com##aside[data-component-name="Recirculation:ArticleRiver"]
+tomsguide.com##aside[data-component-name="Recirculation:ArticleRiver"]
+androidcentral.com##aside:has-text(/you may like/i)
+tw.news.yahoo.com##.recommendation-contents
+
+bbc.com##section[data-e2e="recommendations-heading"]
+bbc.com##section[data-e2e="article-links-block"]
+
+cna.com.tw##.insertGroup
+
+setn.com##section.header_ad_wrap
+setn.com##div.breaking_news_ad_wrap
+
+xda-developers.com###article-body div.adsninja-ad-zone
+
+10minutemail.com###banner_ad
+
+venturebeat.com##.vb-ad-slot
+
+techcrunch.com##.ads-footer-close-btn
+techcrunch.com##.wp-block-group.wp-block-group--ads-footer.alignfull.has-gray-100-background-color.has-background.is-vertical.is-content-justification-center.is-layout-flex.wp-container-core-group-is-layout-123192d1.wp-block-group-is-layout-flex
+udn.com###ads-index-top--mobile
+ettoday.net###mobileweb_320x50_top
+newtalk.tw##.ad-container.mobile_1
+newtalk.tw##.ad-container.mobile_2
+newtalk.tw##.ad-container.mobile_3
+euronews.com##.c-ad.u-show-for-mobile-only > .c-ad__placeholder
+euronews.com##.c-ad.u-show-for-mobile-only
+m.eprice.com.tw##.popup-adv-wrapper
+m.eprice.com.tw##.popup-adv-back
+health.gvm.com.tw##.top-ad-box
+vogue.com.tw##.AdWrapper-fGiLaV.iGDxYx.ad.ad--hero.should-hold-space
+thetvdb.com###ATF
+politico.eu##.ad__mobile.sticky-footer
+
+searchenginejournal.com##.middle_p_txt
+searchenginejournal.com###sspcat_ifrm_v2
+searchenginejournal.com###sej-hello-bar
+tw.news.yahoo.com###sda-top-center-iframe
+
+hk01.com###leaderboard
+hk01.com##article#article-content-section > div:has(#in_article)
+
+nownews.com##.adBlk.ad-head
+
+m.gsmarena.com##div.adv-mid
+
+gizmochina.com##.code-block-6
+
+businessweekly.com.tw##ins.ins-top-cover
+businessweekly.com.tw##.Single-article .Google-special
+
+ithome.com.tw###skybanner
+ithome.com.tw###headerbar
+ithome.com.tw###block-block-33
+ithome.com.tw###block-block-4
+ithome.com.tw##div.side-extra
+
+3c.ltn.com.tw##div[id^="ad-K"], div#ad-B1-ATF
+3c.ltn.com.tw##div[id^="ad-"][id*="IR1"], p.before_ir
+udn.com##div.inline-ads
+inside.com.tw##div.ad-content
+mirrormedia.mg##div[class*="gpt-placeholder__Container"]:has(div[id*="_HD"])
+
+gq.com.tw##[data-testid="sticky-hero-ad"]
+
+techorange.com##div[data-elementor-type="single-post"] > .elementor-hidden-desktop.e-parent
