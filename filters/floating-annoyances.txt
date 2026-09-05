@@ -91,3 +91,4 @@ mirrordaily.news##.z-story-share-bar
 mirrormedia.mg##[class*="article-right-arrow"]
 tw.news.yahoo.com##[id^="share-button-group-"]
 hypesphere.com##.simplefavorite
+ithome.com.tw###block-block-22
