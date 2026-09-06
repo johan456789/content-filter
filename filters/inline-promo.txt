@@ -33,3 +33,4 @@ cna.com.tw##.gmailNews
 inside.com.tw##p.ck-section:has(a[href*="insider/newsletter"])
 businessweekly.com.tw##.Highlight-left
 techcrunch.com##.jw-player-inline-promo
+gvm.com.tw##section.newsletter
