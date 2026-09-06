@@ -93,3 +93,5 @@ tw.news.yahoo.com##[id^="share-button-group-"]
 hypesphere.com##.simplefavorite
 ithome.com.tw###block-block-22
 gvm.com.tw###article_float_article
+gvm.com.tw##div.gotop
+gvm.com.tw###footer_ad
