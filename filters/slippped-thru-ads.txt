@@ -56,4 +56,4 @@ gq.com.tw##[data-testid="sticky-hero-ad"]
 
 techorange.com##div[data-elementor-type="single-post"] > .elementor-hidden-desktop.e-parent
 
-marieclaire.com.tw##div.adTop, div.adSuper
+marieclaire.com.tw##div.adTop, div.adSuper, div.adInnerMpu
