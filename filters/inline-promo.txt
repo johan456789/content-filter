@@ -21,7 +21,7 @@ variety.com###offer_e15edb56dc7025063457-0
 androidauthority.com##.e_6o
 androidauthority.com##div:has(> a[data-sel="db-link-el"])
 androidauthority.com##div:has(> p > a[href*="external-links"])
-androidauthority.com##div:has(> div > a[title="Follow us on Google Discover"])
+androidauthority.com##div:has(> div > div > a[title="Follow us on Google Discover"])
 androidauthority.com##div:has(> vf-widget#vf-conversation-starter)
 
 gq.com.tw##figure[data-testid="cne-interlude-container"]
