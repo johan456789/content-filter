@@ -35,3 +35,4 @@ inside.com.tw##p.ck-section:has(a[href*="insider/newsletter"])
 businessweekly.com.tw##.Highlight-left
 techcrunch.com##.jw-player-inline-promo
 gvm.com.tw##section.newsletter
+technologyreview.com##div.piano__post_body
