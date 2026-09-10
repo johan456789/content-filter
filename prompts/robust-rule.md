@@ -10,6 +10,7 @@ Produce the most robust uBlock Origin cosmetic filter. "Robust" = survives site 
 ## 1. Pick the right target element
 
 - Choose the **smallest ancestor** whose removal/hiding kills the annoyance without hiding unrelated content.
+- If the target sits inside a separator-bearing wrapper (`<hr>`, `border-y` / `border-t` / `border-b`, `divide-*`), hide the **wrapper, not just the inner content** — removing only the buttons/text leaves an empty ruled band (`---` / `---`) behind. Extend the selector (e.g. via `:has()`) so the separators go with it.
 - If the annoyance is a child inside a wrapper (e.g. an ad label inside a card), prefer hiding the wrapper via `:has()` — **only if every match of the wrapper selector is genuinely junk**.
 - Anchor on the element's **static identity**, not its position in the DOM tree.
 
