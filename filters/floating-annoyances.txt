@@ -101,3 +101,4 @@ ettoday.net##div.subject_news > div.sharebox_2
 scitechvista.nat.gov.tw##.scrollToTop
 www.twreporter.org##div:has(> div > div > div > img[alt="即時追蹤最新報導"])
 www.twreporter.org##div[class*="desktop-tools__ToolsBlock"]
+popularai.org##p[data-component-name="ButtonCreateButton"]:has(a[href*="action=share"])
