@@ -37,3 +37,4 @@ techcrunch.com##.jw-player-inline-promo
 gvm.com.tw##section.newsletter
 technologyreview.com##div.piano__post_body
 quantamagazine.org##aside.abstract-insight
+www.oxfordlearnersdictionaries.com###ring-links-box
