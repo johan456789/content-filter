@@ -21,3 +21,4 @@ bbc.com##section[data-e2e="article-links-block"]
 
 cna.com.tw##.insertGroup
 cnn.com##article div[data-component-name="related-content"]
+businessinsider.com##[data-component-type="post-video-recirc"]:style(display: none !important;)
