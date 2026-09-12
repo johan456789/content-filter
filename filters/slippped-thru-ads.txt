@@ -57,3 +57,6 @@ gq.com.tw##[data-testid="sticky-hero-ad"]
 techorange.com##div[data-elementor-type="single-post"] > .elementor-hidden-desktop.e-parent
 
 marieclaire.com.tw##div.adTop, div.adSuper, div.adInnerMpu
+
+merriam-webster.com###main-banner-ad-container
+merriam-webster.com##div[id^="AdThrive_Content_"]
