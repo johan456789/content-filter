@@ -60,3 +60,4 @@ marieclaire.com.tw##div.adTop, div.adSuper, div.adInnerMpu
 
 merriam-webster.com###main-banner-ad-container
 merriam-webster.com##div[id^="AdThrive_Content_"]
+merriam-webster.com##div.tbgads-anchor-slot-wrap
