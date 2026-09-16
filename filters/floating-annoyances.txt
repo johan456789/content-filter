@@ -4,6 +4,7 @@ xda-developers.com##.w-article-header-comp > .w-heading-options
 howtogeek.com##body > main > article > aside.w-quick-action-sidebar
 howtogeek.com##.w-article-header-comp > .w-heading-options
 makeuseof.com##body > main > article > aside.w-quick-action-sidebar
+makeuseof.com##.w-article-header-comp > .w-heading-options
 pocket-lint.com##aside.w-quick-action-sidebar
 zdnet.com##.c-avStickyVideo:remove()
 
