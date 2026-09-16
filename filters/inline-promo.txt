@@ -39,3 +39,4 @@ technologyreview.com##div.piano__post_body
 quantamagazine.org##aside.abstract-insight
 www.oxfordlearnersdictionaries.com###ring-links-box
 gizmochina.com##.gz-preferred-source, .gc-affiliate-disclosure
+itsfoss.com##div.kg-button-card:has(a[href*="youtube.com/@itsfoss"])
