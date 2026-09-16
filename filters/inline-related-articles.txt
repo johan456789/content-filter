@@ -24,3 +24,4 @@ cna.com.tw##.insertGroup
 cnn.com##article div[data-component-name="related-content"]
 businessinsider.com##[data-component-type="post-video-recirc"]:style(display: none !important;)
 popularai.org##div[data-component-name="DigestPostEmbed"], h4:has(+ div[data-component-name="DigestPostEmbed"]), div:has(> hr):has(+ h4 + div[data-component-name="DigestPostEmbed"]), div[data-component-name="DigestPostEmbed"] + div:has(> hr)
+gizchina.com##div:has(> h4.relatedArticles__title)

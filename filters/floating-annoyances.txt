@@ -105,3 +105,4 @@ www.twreporter.org##div:has(> div > div > div > img[alt="即時追蹤最新報�
 www.twreporter.org##div[class*="desktop-tools__ToolsBlock"]
 popularai.org##p[data-component-name="ButtonCreateButton"]:has(a[href*="action=share"])
 comaps.app##div.banner-android
+gizchina.com##div:has(> button[title^="Share on"])
