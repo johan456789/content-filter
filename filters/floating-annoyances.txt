@@ -106,3 +106,4 @@ www.twreporter.org##div[class*="desktop-tools__ToolsBlock"]
 popularai.org##p[data-component-name="ButtonCreateButton"]:has(a[href*="action=share"])
 comaps.app##div.banner-android
 gizchina.com##div:has(> button[title^="Share on"])
+taipeitimes.com##ul[data-desc="分享列"] ul.sh
