@@ -7,6 +7,7 @@ makeuseof.com##body > main > article > aside.w-quick-action-sidebar
 makeuseof.com##.w-article-header-comp > .w-heading-options
 pocket-lint.com##aside.w-quick-action-sidebar
 zdnet.com##.c-avStickyVideo:remove()
+zdnet.com##div[data-exco-sticky="1"]
 
 setn.com##div.article_tool_wrap
 setn.com##section.page_tool_wrap
