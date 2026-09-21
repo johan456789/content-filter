@@ -110,3 +110,4 @@ gizchina.com##div:has(> button[title^="Share on"])
 taipeitimes.com##ul[data-desc="分享列"] ul.sh
 9to5google.com##div#onesignal-slidedown-container
 bbc.com##[class*="ActionsContainerStyled"]
+ctee.com.tw##.article-function
