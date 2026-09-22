@@ -13,6 +13,7 @@ tw.stock.yahoo.com##.recommendation-contents
 
 tomshardware.com##aside[data-component-name="Recirculation:ArticleRiver"]
 tomsguide.com##aside[data-component-name="Recirculation:ArticleRiver"]
+techradar.com##aside[data-component-name="Recirculation:ArticleRiver"]
 androidcentral.com##aside:has-text(/you may like/i)
 tw.news.yahoo.com##.recommendation-contents
 
