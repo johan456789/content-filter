@@ -113,3 +113,4 @@ bbc.com##[class*="ActionsContainerStyled"]
 ctee.com.tw##.article-function
 hiking.biji.co###proticoFrameSpan
 hiking.biji.co##.fixed-bottom-bar
+travel.tycg.gov.tw##div.func-btn-group
