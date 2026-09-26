@@ -92,6 +92,7 @@ businessweekly.com.tw##.Single-top-icon
 3c.ltn.com.tw##div:has(> a.sharefb)
 udn.com##aside.article-content__social
 udn.com##section.article-content__plugins
+udn.com##a.udn--event__holder
 mirrormedia.mg##div[class*="promote-topic-swiper__Wrapper"]
 mirrormedia.mg##div[class*="SocialMediaAndDonateLink"]
 mirrordaily.news##.z-story-share-bar
