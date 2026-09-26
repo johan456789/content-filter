@@ -38,6 +38,8 @@ udn.com##.i-arrow5-up
 reading.udn.com###sticky-side-banner-widget
 ubrand.udn.com##.goTop.show
 chinatimes.com##.gotop
+chinatimes.com###proticoFrameSpan
+chinatimes.com##.font-size-setting
 ctee.com.tw##.sticky-btn.revealed
 finance.ettoday.net###back-top
 health.gvm.com.tw###gotop
