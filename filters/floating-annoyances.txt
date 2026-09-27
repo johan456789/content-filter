@@ -118,3 +118,4 @@ hiking.biji.co###proticoFrameSpan
 hiking.biji.co##.fixed-bottom-bar
 travel.tycg.gov.tw##div.func-btn-group
 www.twreporter.org###mobile-tool-bar
+ettoday.net##div:has-text(ad or script blocking software is interfering with this page)
