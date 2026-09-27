@@ -119,3 +119,5 @@ hiking.biji.co##.fixed-bottom-bar
 travel.tycg.gov.tw##div.func-btn-group
 www.twreporter.org###mobile-tool-bar
 ettoday.net##div:has(> div > img[alt="Warning icon"])
+www.cw.com.tw##div[class*="article__provideViews"]
+www.cw.com.tw##div.article__function
