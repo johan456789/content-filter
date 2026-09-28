@@ -64,3 +64,5 @@ merriam-webster.com##div.tbgads-anchor-slot-wrap
 gizchina.com##div.raw-html-component:has(div[id^="protag-"])
 thenewslens.com##div.ad-content
 storm.mg##div.adGeneral
+
+www.oxfordlearnersdictionaries.com###ad_topslot
