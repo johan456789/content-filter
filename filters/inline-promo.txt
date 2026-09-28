@@ -43,3 +43,5 @@ itsfoss.com##div.kg-button-card:has(a[href*="youtube.com/@itsfoss"])
 itsfoss.com##article a[href*="warp.dev"]
 gizchina.com##section[class*="Google"][class*="Cta"]
 www.cw.com.tw##div:has(> a[onsite-events="AdFliers"])
+storm.mg##a.threadsNotify
+storm.mg##div.my-2:has(> audio[src*="tts.stormmg.com"])
