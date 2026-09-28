@@ -121,3 +121,4 @@ www.twreporter.org###mobile-tool-bar
 ettoday.net##div:has(> div > img[alt="Warning icon"])
 www.cw.com.tw##div[class*="article__provideViews"]
 www.cw.com.tw##div.article__function
+storm.mg##div:has(+ [data-test-comp="CommonNavBarSticky"])
