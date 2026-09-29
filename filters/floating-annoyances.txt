@@ -122,3 +122,5 @@ ettoday.net##div:has(> div > img[alt="Warning icon"])
 www.cw.com.tw##div[class*="article__provideViews"]
 www.cw.com.tw##div.article__function
 storm.mg##div:has(+ [data-test-comp="CommonNavBarSticky"])
+meet.bnext.com.tw##div.h-12.bg-transparent.sticky
+meet.bnext.com.tw##.meetaa
