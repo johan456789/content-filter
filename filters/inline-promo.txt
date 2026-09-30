@@ -46,3 +46,4 @@ www.cw.com.tw##div:has(> a[onsite-events="AdFliers"])
 storm.mg##a.threadsNotify
 storm.mg##div.my-2:has(> audio[src*="tts.stormmg.com"])
 meet.bnext.com.tw##div.support-box.pumpkinbanner.bnextmeida-banner.adbox
+androidauthority.com##div[data-container-type="content"]:has(> div > p > a[href*="andauth.co"])
