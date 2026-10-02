@@ -1,4 +1,5 @@
 androidpolice.com##body > main > article > aside.w-quick-action-sidebar
+androidpolice.com##.w-article-header-comp > .w-heading-options
 xda-developers.com##body > main > article > aside.w-quick-action-sidebar
 xda-developers.com##.w-article-header-comp > .w-heading-options
 howtogeek.com##body > main > article > aside.w-quick-action-sidebar
