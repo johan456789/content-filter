@@ -129,3 +129,4 @@ storm.mg##div:has(+ [data-test-comp="CommonNavBarSticky"])
 meet.bnext.com.tw##div.h-12.bg-transparent.sticky
 meet.bnext.com.tw##.meetaa
 deepmind.google##label.share-toggle__button
+www.cw.com.tw##div.article__next--algorithm
