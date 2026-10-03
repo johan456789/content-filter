@@ -48,3 +48,4 @@ storm.mg##div.my-2:has(> audio[src*="tts.stormmg.com"])
 meet.bnext.com.tw##div.support-box.pumpkinbanner.bnextmeida-banner.adbox
 androidauthority.com##div[data-container-type="content"]:has(> div > p > a[href*="andauth.co"])
 commonhealth.com.tw##.tts-block
+www.cw.com.tw##span#article-tts
