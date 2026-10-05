@@ -131,3 +131,5 @@ meet.bnext.com.tw##.meetaa
 deepmind.google##label.share-toggle__button
 www.cw.com.tw##div.article__next--algorithm
 npr.org###npr-player
+techrepublic.com###back-to-top
+techrepublic.com##div.fixed.right-\[72px\]
