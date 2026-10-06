@@ -73,3 +73,5 @@ meet.bnext.com.tw##div.support-frame:has(> [data-slot$="_all_top"])
 
 techrepublic.com##div.has-data-empty\:hidden
 techrepublic.com##sticky-footer-ad
+
+techbang.com###_popIn_recommend_word ._popIn_recommend_article_ad
