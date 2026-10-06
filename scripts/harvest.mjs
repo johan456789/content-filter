@@ -209,7 +209,7 @@ async function cmdValidate() {
   if (!url || !rule) throw new Error('Usage: validate <url> <rule-or-selector> [--viewport=desktop|mobile]')
   const parsed = rule.includes('##') ? parseRule(rule) : { domain: '', selector: rule, procedural: [] }
   const { browser, page } = await openPage(url, viewportName)
-  const res = await page.evaluate((sel) => {
+  const query = () => page.evaluate((sel) => {
     if (!sel) return { error: 'empty selector after stripping procedural pseudos' }
     let nodes
     try { nodes = document.querySelectorAll(sel) } catch (e) { return { error: `invalid selector: ${e.message}` } }
@@ -232,6 +232,13 @@ async function cmdValidate() {
       }),
     }
   }, parsed.selector)
+  // JS-injected widgets (PopIn, Dable, Taboola, ad slots) render after load — poll before giving up.
+  let res = await query()
+  const deadline = Date.now() + 10000
+  while (!res.error && res.count === 0 && Date.now() < deadline) {
+    await new Promise((r) => setTimeout(r, 250))
+    res = await query()
+  }
   await browser.close()
   json({
     rule,
