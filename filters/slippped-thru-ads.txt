@@ -75,3 +75,6 @@ techrepublic.com##div.has-data-empty\:hidden
 techrepublic.com##sticky-footer-ad
 
 techbang.com###_popIn_recommend_word ._popIn_recommend_article_ad
+
+chinatimes.com##[data-id="pc-super-banner"]
+chinatimes.com##[data-id="pc-middle-billboard"]
