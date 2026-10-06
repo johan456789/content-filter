@@ -134,3 +134,4 @@ npr.org###npr-player
 techrepublic.com###back-to-top
 techrepublic.com##div.fixed.right-\[72px\]
 cbsnews.com##.story__right-rail-video
+news.pts.org.tw##.mobileNav
