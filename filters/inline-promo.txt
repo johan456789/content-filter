@@ -50,4 +50,4 @@ androidauthority.com##div[data-container-type="content"]:has(> div > p > a[href*
 commonhealth.com.tw##.tts-block
 www.cw.com.tw##span#article-tts
 setn.com##.ai_article_wrap
-news.ebc.net.tw##.article_content p:has(> a[href*="app_setup_page"])
+news.ebc.net.tw##.article_content div.inline_text:has(a[href*="app_setup_page"])
