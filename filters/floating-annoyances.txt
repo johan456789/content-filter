@@ -133,3 +133,4 @@ www.cw.com.tw##div.article__next--algorithm
 npr.org###npr-player
 techrepublic.com###back-to-top
 techrepublic.com##div.fixed.right-\[72px\]
+cbsnews.com##.story__right-rail-video
