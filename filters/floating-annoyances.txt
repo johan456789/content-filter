@@ -136,3 +136,4 @@ techrepublic.com##div.fixed.right-\[72px\]
 cbsnews.com##.story__right-rail-video
 news.pts.org.tw##.mobileNav
 chinatimes.com##.col-xl-1:has(> .social-share-wrapper)
+news.ebc.net.tw##.share.share_box
