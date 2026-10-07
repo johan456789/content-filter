@@ -144,3 +144,5 @@ news.ltn.com.tw##.article_wrap > .shareBox:not(.articleEnd)
 upmedia.mg##header ul.nav.nav-pills
 upmedia.mg##header .news-flash
 upmedia.mg###backToTop:style(display: none !important;)
+upmedia.mg##body:style(padding-top: 0 !important;)
+upmedia.mg###header:style(position: sticky !important; top: 0 !important;)
