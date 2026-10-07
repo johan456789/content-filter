@@ -86,3 +86,4 @@ tw.news.yahoo.com##div:has(> [id$="anchored-btm-sticky-iframe"])
 
 news.ltn.com.tw##div[id^="ad-K"]
 news.ltn.com.tw##div[id^="ad-"][id*="IR1"], p.before_ir
+upmedia.mg##div.px24.bg-white:has(> .ad-mb)
