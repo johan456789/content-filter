@@ -53,3 +53,4 @@ setn.com##.ai_article_wrap
 news.ebc.net.tw##.article_content div.inline_text:has(a[href*="app_setup_page"])
 upmedia.mg##.publish > .publish-img
 upmedia.mg##.publish > .publish-pc:style(display: none !important;)
+storm.mg##[google-add-preferred-source-btn]
