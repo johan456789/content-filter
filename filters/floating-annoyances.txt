@@ -149,3 +149,4 @@ upmedia.mg###header:style(position: sticky !important; top: 0 !important;)
 news.tvbs.com.tw##astro-island[component-url*="ScrollToTop"]
 taisounds.com##ul.nav.nav-pills
 taisounds.com##.header__share.p-0
+taisounds.com###wrapper:style(margin-top: -50px !important;)
