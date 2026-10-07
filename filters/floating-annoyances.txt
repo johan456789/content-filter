@@ -138,3 +138,4 @@ news.pts.org.tw##.mobileNav
 chinatimes.com##.col-xl-1:has(> .social-share-wrapper)
 news.ebc.net.tw##.share.share_box
 hk01.com###lcs-stack-sticky-bottom
+news.ltn.com.tw##.article_wrap > .shareBox:not(.articleEnd)

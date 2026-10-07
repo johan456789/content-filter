@@ -83,3 +83,6 @@ news.ebc.net.tw##.ad_box.top_ad
 
 tw.news.yahoo.com##.bg-toast-background:has([id^="sda-"])
 tw.news.yahoo.com##div:has(> [id$="anchored-btm-sticky-iframe"])
+
+news.ltn.com.tw##div[id^="ad-K"]
+news.ltn.com.tw##div[id^="ad-"][id*="IR1"], p.before_ir
