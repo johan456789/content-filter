@@ -146,3 +146,4 @@ upmedia.mg##header .news-flash
 upmedia.mg###backToTop:style(display: none !important;)
 upmedia.mg##body:style(padding-top: 0 !important;)
 upmedia.mg###header:style(position: sticky !important; top: 0 !important;)
+news.tvbs.com.tw##astro-island[component-url*="ScrollToTop"]

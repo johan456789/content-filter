@@ -30,3 +30,4 @@ gizchina.com##div:has(> h4.relatedArticles__title)
 commonhealth.com.tw##.side-window:has-text(你可能有興趣)
 npr.org##.bucketwrap.inset2col
 hk01.com##article#article-content-section > div.flex.flex-col:has(> a.text-blue-500)
+news.tvbs.com.tw##aside[data-lexical-article-more-link]

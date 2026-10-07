@@ -87,3 +87,5 @@ tw.news.yahoo.com##div:has(> [id$="anchored-btm-sticky-iframe"])
 news.ltn.com.tw##div[id^="ad-K"]
 news.ltn.com.tw##div[id^="ad-"][id*="IR1"], p.before_ir
 upmedia.mg##.container.ad-mb.px24
+news.tvbs.com.tw##div:has(> div > #news_m_read_uptop), div:has(> #news_pc_read_top)
+news.tvbs.com.tw##.inline-mobile-ad-wrapper, .inline-pc-ad-wrapper
