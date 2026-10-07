@@ -33,6 +33,8 @@ ec.ltn.com.tw##[href*="javascript:void(0);"]
 news.ltn.com.tw###top
 news.ltn.com.tw###marquee
 news.ltn.com.tw###marqueeHeader
+news.ltn.com.tw##.ltnheader:style(height: auto !important;)
+news.ltn.com.tw##.headerP_high:style(height: 100px !important;)
 health.ltn.com.tw###top
 health.ltn.com.tw##.softPush_notification
 health.ltn.com.tw##[href*="javascript\:void\(0\)\;"]
