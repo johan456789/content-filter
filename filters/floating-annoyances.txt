@@ -150,3 +150,6 @@ news.tvbs.com.tw##astro-island[component-url*="ScrollToTop"]
 taisounds.com##ul.nav.nav-pills
 taisounds.com##.header__share.p-0
 taisounds.com###wrapper:style(margin-top: -50px !important;)
+mirrormedia.mg##header[data-slot="site-header"] div:has(> div > nav[aria-label="主要分類"])
+mirrormedia.mg##div:has(> a.GTM-share-line)
+mirrormedia.mg##[data-slot="back-to-top"]
