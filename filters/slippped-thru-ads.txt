@@ -80,3 +80,6 @@ techbang.com###_popIn_recommend_word ._popIn_recommend_article_ad
 chinatimes.com##[data-id="pc-super-banner"]
 chinatimes.com##[data-id="pc-middle-billboard"]
 news.ebc.net.tw##.ad_box.top_ad
+
+tw.news.yahoo.com##.bg-toast-background:has([id^="sda-"])
+tw.news.yahoo.com##div:has(> [id$="anchored-btm-sticky-iframe"])
