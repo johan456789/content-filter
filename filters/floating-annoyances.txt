@@ -161,4 +161,4 @@ news.cnyes.com##.fixed-wrapper--m
 infosecu.technews.tw##ul.post-meta, span.inside-line
 infosecu.technews.tw###scrollup, a.cd-top
 
-taiwannews.com.tw##section[class*="scrollContainer"]
+taiwannews.com.tw##section:has(> a[href^="/en/topic/"])
