@@ -157,3 +157,6 @@ news.cnyes.com###anue-smart-banner
 news.cnyes.com##body.is-news-detail-page.is-anue-smart-banner-visible #content-main-news.content-main-news-with-smart-banner:style(padding-top: 48px !important;)
 news.cnyes.com##section:has(#toggle-font-button)
 news.cnyes.com##.fixed-wrapper--m
+
+infosecu.technews.tw##ul.post-meta, span.inside-line
+infosecu.technews.tw###scrollup, a.cd-top
