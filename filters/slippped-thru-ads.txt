@@ -71,7 +71,7 @@ www.oxfordlearnersdictionaries.com###ad_topslot
 
 nytimes.com##[data-ad-element="outer_ad_container"]
 meet.bnext.com.tw##div.support-frame:has(> [data-slot$="_all_top"])
-bnext.com.tw##div[title="pk-space-11"]
+bnext.com.tw##.header-top-links div[title^="pk-space-"]
 
 techrepublic.com##div.has-data-empty\:hidden
 techrepublic.com##sticky-footer-ad
