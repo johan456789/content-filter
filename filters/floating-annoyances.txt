@@ -162,3 +162,4 @@ infosecu.technews.tw##ul.post-meta, span.inside-line
 infosecu.technews.tw###scrollup, a.cd-top
 
 taiwannews.com.tw##section:has(> a[href^="/en/topic/"])
+global.udn.com##aside.article-toolbox
