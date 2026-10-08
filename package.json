@@ -4,7 +4,8 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "harvest": "bun scripts/harvest.mjs"
+    "harvest": "bun scripts/harvest.mjs",
+    "agent-workspace": "bun scripts/agent-workspace.mjs"
   },
   "dependencies": {
     "playwright": "^1.62.1"

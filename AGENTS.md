@@ -111,6 +111,48 @@ After committing, take **cropped** before/after screenshots showing the element:
 
 This gives the user a clear visual confirmation the filter works.
 
+## Version control (jj)
+
+This repo is a **colocated jj + git** repo. Use `jj` for everything; treat `git` as read-only.
+
+- **No staging.** Every `jj` command snapshots the working copy into `@` — saving a file puts it in `@` immediately.
+- **Commit:** `jj describe -m "type(scope): ..."` (see step 6 for the format), then `jj new` to start the next change.
+- **Inspect:** `jj status`, `jj diff`, `jj log`.
+- **Remotes:** `jj git fetch` to update; `jj bookmark set <name> -r @` then `jj git push -b <name>` to publish.
+- **Recover:** `jj undo` (last op), or `jj op log` + `jj op restore <op-id>` (any earlier state). Nothing is lost.
+- **Never run raw mutating git** (`git commit`, `git rebase`, `git switch`, `git reset`, `git checkout`) — it desyncs jj. `jj git ...` and `gh` are fine.
+- **Never run interactive commands** (they hang agents): `jj resolve`, `jj diffedit`, `jj arrange`, bare `jj split`, `jj squash -i`. Resolve conflicts by editing the marked files directly.
+- Always pass `-m` to commands that take a message, and `--no-pager` to commands that print.
+- Don't rewrite published history.
+
+## Workspaces (parallel agents)
+
+**Always do task work in a named jj workspace — never in `default`.** The main checkout is coordination-only. Every agent edits in its own workspace so parallel agents never clobber each other.
+
+Create a colocated workspace (so `git`/`gh` work inside it):
+
+```bash
+bun scripts/agent-workspace.mjs create <name>     # → ../ublock-rule-gen-<name>
+bun scripts/agent-workspace.mjs list
+bun scripts/agent-workspace.mjs remove <name>
+```
+
+Then run the agent with that directory as its cwd. In kimaki:
+
+```bash
+kimaki send --cwd /home/han/Developer/ublock-rule-gen-<name> --prompt '...' --agent build
+```
+
+Never use `kimaki send --worktree` for this repo — it creates a plain git worktree with no `.jj`, so jj won't work inside it.
+
+If you were launched in `default`, do **not** edit files there. Create a workspace with the helper and do all edits under its absolute path, or ask the user to relaunch you with `--cwd <path>`.
+
+Rules inside a workspace:
+- Work only on your own `@` and its descendants. Never rebase, squash, abandon, or edit a commit that another workspace has checked out — it makes that workspace go stale.
+- On "stale working copy", run `jj workspace update-stale`.
+- `jj workspace list` shows every workspace's `@`; `jj log -r 'conflicts() | divergent()'` spots trouble.
+- Publish with your own bookmark: `jj bookmark set agent/<name> -r @` then `jj git push -b agent/<name>`.
+
 ## Constraints & failure handling
 
 - **Login walls / consent dialogs / Cloudflare / anti-bot blocks (e.g. Akamai 403)**: try dismissing common dialogs first; if the page is still unusable headless, escalate in this order — (1) `playwright-cli` with `--headed` to bypass headless fingerprinting, (2) ask the user to paste the element's outerHTML (legacy flow), (3) the playwriter skill as a last resort. If the target element is mobile-only and not served on desktop, also pass `--device='Pixel 7'` (or similar) to get the mobile UA and viewport.
