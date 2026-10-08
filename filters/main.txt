@@ -1,7 +1,7 @@
 ! Title: Tsung-Han Yu's Custom Filter List
 ! Homepage: https://github.com/johan456789/content-filter
 ! Description: Blocks stuff that annoys me.
-! Expires: 1 day
+! Expires: 12 hours
 
 !#include floating-annoyances.txt
 !#include inline-promo.txt
