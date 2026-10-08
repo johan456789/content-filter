@@ -5,7 +5,7 @@ howtogeek.com###article-body > div > aside.display-card
 makeuseof.com###article-body > div > aside.display-card
 windowscentral.com###article-body aside
 zdnet.com##p:has(strong)
-bnext.com.tw##.htmlview.article-content blockquote:has-text(延伸閱讀)
+bnext.com.tw##.htmlview.article-content blockquote:has-text(延伸閱讀), bnext.com.tw##.htmlview.article-content blockquote:has-text(立即報名)
 
 aljazeera.com##section.more-on
 
