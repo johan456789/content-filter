@@ -163,3 +163,4 @@ infosecu.technews.tw###scrollup, a.cd-top
 
 taiwannews.com.tw##section:has(> a[href^="/en/topic/"])
 global.udn.com##aside.article-toolbox
+reuters.com##div[data-testid="ArticleToolbar"][class*="info-content"]
