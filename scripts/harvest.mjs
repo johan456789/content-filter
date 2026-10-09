@@ -1,5 +1,5 @@
 #!/usr/bin/env bun
-import { chromium } from 'playwright'
+import { chromium, devices } from 'playwright'
 import { readFileSync, writeFileSync, mkdirSync } from 'node:fs'
 import path from 'node:path'
 
@@ -27,14 +27,42 @@ async function launch() {
   return chromium.launch({ headless: true })
 }
 
+function deviceDescriptor(name) {
+  const dev = devices[name]
+  if (!dev) {
+    const sample = Object.keys(devices).filter((d) => /pixel|iphone/i.test(d)).slice(0, 8)
+    throw new Error(`Unknown device: ${name}. Examples: ${sample.join(', ')}`)
+  }
+  const { defaultBrowserType, ...rest } = dev
+  return rest
+}
+
 async function openPage(url, viewportName, opts = {}) {
-  const vp = VIEWPORTS[viewportName]
-  if (!vp) throw new Error(`Unknown viewport: ${viewportName}. Valid: ${Object.keys(VIEWPORTS).join(', ')}`)
+  const device = flags.device ? deviceDescriptor(flags.device) : null
+  let vp
+  if (flags.viewport) {
+    const v = VIEWPORTS[viewportName]
+    if (!v) throw new Error(`Unknown viewport: ${viewportName}. Valid: ${Object.keys(VIEWPORTS).join(', ')}`)
+    vp = { width: v.width, height: v.height, deviceScaleFactor: 1 }
+  } else if (device) {
+    vp = {
+      width: device.viewport.width,
+      height: device.viewport.height,
+      deviceScaleFactor: device.deviceScaleFactor ?? 1,
+    }
+  } else {
+    const v = VIEWPORTS[viewportName]
+    if (!v) throw new Error(`Unknown viewport: ${viewportName}. Valid: ${Object.keys(VIEWPORTS).join(', ')}`)
+    vp = { width: v.width, height: v.height, deviceScaleFactor: 1 }
+  }
   const browser = await launch()
-  const ctx = await browser.newContext({
-    viewport: { width: vp.width, height: vp.height, deviceScaleFactor: 1 },
-    userAgent: UA,
-  })
+  // Mobile-only templates key off the UA/isMobile flags, not the viewport width, so a
+  // --device pass can keep the documented 390x844 coordinate space while still getting
+  // the phone markup.
+  const contextOptions = device
+    ? { ...device, viewport: { width: vp.width, height: vp.height }, deviceScaleFactor: vp.deviceScaleFactor }
+    : { viewport: vp, userAgent: UA }
+  const ctx = await browser.newContext(contextOptions)
   const page = await ctx.newPage()
   await page.goto(url, { waitUntil: 'domcontentloaded', timeout: 45000 })
   await page.waitForLoadState('networkidle', { timeout: 10000 }).catch(() => {})
@@ -255,11 +283,13 @@ async function main() {
       console.log(`harvest.mjs — DOM harvesting for uBlock rule generation
 
 Usage:
-  screenshot <url> [--viewport=desktop|mobile] [--full] [--out=dir]
+  screenshot <url> [--viewport=desktop|mobile] [--device=<name>] [--full] [--out=dir]
       Screenshot the page at a fixed viewport (default desktop 1440x900, mobile 390x844).
       Also saves full page HTML next to the PNG. --full captures full-page screenshot.
+      --device='Pixel 7' sends a phone UA + isMobile so mobile-only templates render;
+      combine with --viewport to keep the fixed coordinate space.
 
-  find <url> <x> <y> [--viewport=desktop|mobile] [--scroll=pixels]
+  find <url> <x> <y> [--viewport=desktop|mobile] [--device=<name>] [--scroll=pixels]
       Dump the ancestor chain of the element at pixel (x,y), deepest first.
       Coordinates are CSS pixels in the screenshot's viewport. Use --scroll to match
       full-page screenshot coordinates (scroll = floor(y / viewportH) * viewportH).
@@ -268,7 +298,7 @@ Usage:
       Find the bounding box of pixels changed between two screenshots (user annotation).
       Returns bbox + center in image pixel coordinates.
 
-  validate <url> <rule-or-selector> [--viewport=desktop|mobile]
+  validate <url> <rule-or-selector> [--viewport=desktop|mobile] [--device=<name>]
       Count matches of a CSS selector (or full uBlock rule like domain##sel:style(...))
       on the live page; strips uBlock procedural pseudos before querying.`)
       return
