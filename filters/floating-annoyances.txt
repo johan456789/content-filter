@@ -166,3 +166,5 @@ global.udn.com##aside.article-toolbox
 reuters.com##div[data-testid="ArticleToolbar"][class*="info-content"]
 
 techradar.com###utility-bar
+
+travel.ettoday.net##article .operate_1
