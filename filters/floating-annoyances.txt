@@ -83,7 +83,7 @@ mobile01.com##.app-open-btn
 
 tomsguide.com###skinnyBanner
 tomsguide.com###component-mega-nav
-tomsguide.com###viafoura-comment-count-link
+tomsguide.com###utility-bar
 
 cna.com.tw##.articleTopBtnBox
 cna.com.tw##.line-ad
