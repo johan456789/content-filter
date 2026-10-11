@@ -94,3 +94,4 @@ news.tvbs.com.tw##.inline-mobile-ad-wrapper, .inline-pc-ad-wrapper
 techradar.com##.bordeaux-slot:style(display: none !important;)
 techradar.com##.bordeaux-anchored-container:style(display: none !important;)
 techradar.com##div[id^="ad-unit-"]
+fortune.com##.nativo-wrapper

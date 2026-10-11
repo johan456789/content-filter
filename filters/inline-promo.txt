@@ -56,3 +56,4 @@ upmedia.mg##.publish > .publish-pc:style(display: none !important;)
 storm.mg##[google-add-preferred-source-btn]
 
 news.sky.com##p:has-text("More from Sky News")
+fortune.com##iframe[src*="templateId=OTPRFCZS2CUZ"]
