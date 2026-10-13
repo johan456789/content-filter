@@ -175,3 +175,5 @@ travel.ettoday.net##article .operate_1
 pixnet.net###bottomNav
 euronews.com##.js-swip-btn
 focustaiwan.tw###jsSocialShare
+
+france24.com##.o-tapbar
