@@ -96,3 +96,4 @@ techradar.com##.bordeaux-anchored-container:style(display: none !important;)
 techradar.com##div[id^="ad-unit-"]
 fortune.com##.nativo-wrapper
 focustaiwan.tw##.TopAdBox
+ft.com##.n-layout__header-before > .slot-wrapper
