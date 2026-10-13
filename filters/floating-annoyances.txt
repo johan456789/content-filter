@@ -163,7 +163,7 @@ news.cnyes.com##.fixed-wrapper--m
 
 infosecu.technews.tw##ul.post-meta, span.inside-line
 infosecu.technews.tw###scrollup, a.cd-top
-technews.tw##span.inside-line
+technews.tw##.inside-line, .inside-telegram, .inside-feedly, .inside-facebook, .inside-facebook-like
 technews.tw###scrollup
 
 taiwannews.com.tw##section:has(> a[href^="/en/topic/"])
