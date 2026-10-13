@@ -34,3 +34,4 @@ news.tvbs.com.tw##aside[data-lexical-article-more-link]
 
 news.sky.com##div[data-component-name="sdc-article-related-stories"]
 euronews.com##.c-widget-related
+zdnet.com##.zd-related-stories
