@@ -60,3 +60,5 @@ fortune.com##[class*="min-h-"]:has(iframe[src*="templateId=OTPRFCZS2CUZ"])
 vx.fortune.com##.newsletter-signup
 
 france24.com##.a-read-more
+
+dutchnews.nl##div.bg-light:has(> a[href*="google.com/preferences/source"])
