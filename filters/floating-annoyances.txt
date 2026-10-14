@@ -179,3 +179,5 @@ euronews.com##.js-swip-btn
 focustaiwan.tw###jsSocialShare
 
 france24.com##.o-tapbar
+
+iamexpat.nl##div[class*="justify-between"][class*="md:hidden"]:has([class*="desktop:gap-x-7"]), div.hidden[class*="md:block"]:has([class*="desktop:gap-x-7"])
