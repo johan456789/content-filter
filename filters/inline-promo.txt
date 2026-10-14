@@ -65,3 +65,5 @@ dutchnews.nl##div.bg-light:has(> a[href*="google.com/preferences/source"])
 
 iamexpat.nl##section[class*="DFD5C7"]
 iamexpat.nl##div[class*="-my-[10px]"]:has([class*="beyondwords-player"])
+nbcdfw.com###ctaConWatch
+nbcdfw.com##iframe.cnbcplayer
