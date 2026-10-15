@@ -184,3 +184,7 @@ iamexpat.nl##div[class*="justify-between"][class*="md:hidden"]:has([class*="desk
 
 ! Reddit mobile web "Open App" CTA in top nav
 reddit.com###open-app-header-cta
+
+! Article header/footer share row and fixed back-to-top button
+taiwan-panorama.com##.no-print.mShare
+taiwan-panorama.com##a#toTop
