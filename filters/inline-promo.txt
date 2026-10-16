@@ -67,3 +67,4 @@ iamexpat.nl##section[class*="DFD5C7"]
 iamexpat.nl##div[class*="-my-[10px]"]:has([class*="beyondwords-player"])
 nbcdfw.com###ctaConWatch
 nbcdfw.com##iframe.cnbcplayer
+androidauthority.com##div[data-container-type="content"]:has(a[href*="andauth.co/AAGoogle"])
