@@ -195,3 +195,6 @@ inside.com.tw##div.post_toolbox
 businesstoday.com.tw##.context__option
 businesstoday.com.tw##.next__box
 businesstoday.com.tw###subscription-news
+
+! Fixed 回上方 back-to-top button, faded in/out by jQuery on scroll
+law.moj.gov.tw###gotop
