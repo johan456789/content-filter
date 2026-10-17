@@ -189,3 +189,9 @@ reddit.com###open-app-header-cta
 taiwan-panorama.com##.no-print.mShare
 taiwan-panorama.com##a#toTop
 inside.com.tw##div.post_toolbox
+
+! Article toolbar (font size / 加入收藏 / share), fixed 熱門推薦 next-article popin
+! and fixed subscription promo bar
+businesstoday.com.tw##.context__option
+businesstoday.com.tw##.next__box
+businesstoday.com.tw###subscription-news
