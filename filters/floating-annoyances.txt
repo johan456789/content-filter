@@ -198,3 +198,6 @@ businesstoday.com.tw###subscription-news
 
 ! Fixed 回上方 back-to-top button, faded in/out by jQuery on scroll
 law.moj.gov.tw###gotop
+
+! Floating bottom "Top" back-to-top button (full-width bar covering article text on mobile)
+web.cec.gov.tw##.floatButtonBar .topBtn
