@@ -97,3 +97,4 @@ techradar.com##div[id^="ad-unit-"]
 fortune.com##.nativo-wrapper
 focustaiwan.tw##.TopAdBox
 ft.com##.n-layout__header-before > .slot-wrapper
+talk.ltn.com.tw##div[id^="ad-"][id*="IR1"], p.before_ir

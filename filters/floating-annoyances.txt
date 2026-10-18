@@ -216,3 +216,10 @@ newsmarket.com.tw##.share-it
 ! Fixed black back-to-top circle button bottom-right, JS shows it with a past__mid
 ! class (visibility/opacity toggle only, so plain display:none holds at every scroll).
 newsmarket.com.tw###to-top-wrap
+
+! talk.ltn.com.tw article header row: 加入Google首選 + FB/X/LINE share icons (same CMS bar
+! as 3c/ec/news, but the row also carries the timestamp, so hide only the share children)
+talk.ltn.com.tw##.function[data-desc="功能列"] > :is(.shareline, .sharetwitter, .sharefb, .google-sourceBtn)
+
+! talk.ltn.com.tw fixed TOP back-to-top button (same #top widget as the other ltn subdomains)
+talk.ltn.com.tw###top
