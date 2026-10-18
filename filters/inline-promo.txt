@@ -73,3 +73,4 @@ howtogeek.com###article-body .display-card.tag.type-generic
 howtogeek.com##.w-google-addus-btn--article-header-variants.is-mobile-only
 
 gvm.com.tw##.article-head_marketing
+reuters.com##p[data-testid="promo-box"]
