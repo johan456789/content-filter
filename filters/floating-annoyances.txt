@@ -216,6 +216,9 @@ newsmarket.com.tw##.share-it
 ! Fixed black back-to-top circle button bottom-right, JS shows it with a past__mid
 ! class (visibility/opacity toggle only, so plain display:none holds at every scroll).
 newsmarket.com.tw###to-top-wrap
+! Mobile-only fixed share bar sliding up from the bottom edge (same icons as the row
+! under the byline, which is already hidden).
+newsmarket.com.tw###mob-bot-share
 
 ! talk.ltn.com.tw article header row: 加入Google首選 + FB/X/LINE share icons (same CMS bar
 ! as 3c/ec/news, but the row also carries the timestamp, so hide only the share children)
