@@ -160,3 +160,25 @@ Rules inside a workspace:
 - **Don't ask the user to resize anything.** Screenshot ↔ coordinates mapping only works on harvest.mjs screenshots at the documented viewports.
 - **The rule must be domain-scoped** (never `##sel` global, never `||` network filters — this is cosmetic filtering only).
 - If the user asks for a selector without a rule (e.g. for scraping), still apply the same robustness methodology and output the selector(s) — CSS + XPath variants are welcome.
+
+## Review dataset (build as you go)
+
+Every working session must also capture the review dataset — nothing reconstructed later.
+
+For the session, create `dataset/<epoch>-<slug>/` (epoch = UTC epoch seconds at session
+start, so folders sort chronologically, e.g. `dataset/1760935542-storm-threads-bar/`).
+Write as the session progresses, never in bulk at the end:
+
+- `input-annotation-N.<ext>` — the user's annotated screenshot(s), the exact files they
+  sent, unmodified and uncropped
+- `output-N-before-<name>.png` / `output-N-after-<name>.png` — the session's own harvest
+  before/after pairs (keep the harvest's pair name; before keeps its odd number so
+  `before` sorts before `after`). Non-pair screenshots are not dataset items
+- `rule.txt` — the final `domain##selector` the session produced
+- `label.txt` — `approve` or `deny`, decided at close: `approve` = the rule was merged
+  to main and pushed, `deny` = the user turned it down. Do not guess from message
+  keywords; the user's decision in the thread is the label
+
+Rules: images come only from the live session captures and user uploads — never
+re-navigate, re-capture or back-fill items. If a capture is missing, write
+`label.txt` with the label and note the gap in a `note.txt` instead of inventing data.
