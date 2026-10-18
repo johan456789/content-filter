@@ -201,3 +201,11 @@ law.moj.gov.tw###gotop
 
 ! Floating bottom "Top" back-to-top button (full-width bar covering article text on mobile)
 web.cec.gov.tw##.floatButtonBar .topBtn
+
+! udn.com article share widgets: sticky left rail (threads/FB/LINE/font-size) — on mobile
+! the same nav is a fixed full-width bar under the header, JS-slid in with a transform.
+! visibility (not display) is required: the rail is a grid item, display:none collapses
+! its 50px column and squeezes the article text into it. Row under the lead image is
+! the FB/LINE share buttons.
+udn.com##nav.story_aside:style(visibility: hidden !important; pointer-events: none !important;)
+udn.com##ul.story_social
