@@ -36,3 +36,5 @@ news.sky.com##div[data-component-name="sdc-article-related-stories"]
 euronews.com##.c-widget-related
 zdnet.com##.zd-related-stories
 theguardian.com##figure[data-spacefinder-role="richLink"]
+
+gvm.com.tw##p:has-text(延伸閱讀：)
