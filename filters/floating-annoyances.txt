@@ -209,3 +209,10 @@ web.cec.gov.tw##.floatButtonBar .topBtn
 ! the FB/LINE share buttons.
 udn.com##nav.story_aside:style(visibility: hidden !important; pointer-events: none !important;)
 udn.com##ul.story_social
+
+! Article share row under the byline (fb / X / LINE / messenger icons), same element
+! on desktop and mobile.
+newsmarket.com.tw##.share-it
+! Fixed black back-to-top circle button bottom-right, JS shows it with a past__mid
+! class (visibility/opacity toggle only, so plain display:none holds at every scroll).
+newsmarket.com.tw###to-top-wrap
