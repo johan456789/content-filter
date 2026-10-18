@@ -152,6 +152,10 @@ Rules inside a workspace:
 - On "stale working copy", run `jj workspace update-stale`.
 - `jj workspace list` shows every workspace's `@`; `jj log -r 'conflicts() | divergent()'` spots trouble.
 - Publish with your own bookmark: `jj bookmark set agent/<name> -r @` then `jj git push -b agent/<name>`.
+- **Clean up after merge.** Once the change is merged to `main` and pushed, remove the
+  workspace: `bun scripts/agent-workspace.mjs remove <name>`. Copy the session dataset
+  into the main checkout first (see *Review dataset*). Removal deletes the checkout
+  directory; commits, bookmarks and the dataset copy stay.
 
 ## Constraints & failure handling
 
