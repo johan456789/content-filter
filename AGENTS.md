@@ -182,3 +182,15 @@ Write as the session progresses, never in bulk at the end:
 Rules: images come only from the live session captures and user uploads — never
 re-navigate, re-capture or back-fill items. If a capture is missing, write
 `label.txt` with the label and note the gap in a `note.txt` instead of inventing data.
+
+**Move the dataset out before cleanup.** `dataset/` is gitignored, so merging the
+branch does not carry it out of a workspace. Before removing a workspace, copy the
+session folder into the main checkout's `dataset/` and verify it landed there:
+
+```bash
+cp -a dataset/<epoch>-<slug> /path/to/ublock-rule-gen/dataset/
+ls /path/to/ublock-rule-gen/dataset/<epoch>-<slug>/
+```
+
+The main-checkout copy is the one that persists; a workspace copy is disposable.
+Never remove a workspace while its dataset exists only inside it.
