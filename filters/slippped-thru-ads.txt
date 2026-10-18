@@ -53,7 +53,7 @@ ithome.com.tw##div.side-extra
 udn.com##div.inline-ads
 ! udn.com homepage top blank band: two empty billboard slots in .main-index__focus grid row 1 (auto row sized by their inline min-height) leave a 250px-wide blank under the breaking-news bar; hiding both collapses the row
 udn.com##.ads-superBanner
-udn.com##.main-index__focus > .udn-ads.udn-ads-300x250
+udn.com##.main-index__focus > #ads-billboard
 inside.com.tw##div.ad-content
 mirrormedia.mg##div[class*="gpt-placeholder__Container"]:has(div[id*="_HD"])
 
