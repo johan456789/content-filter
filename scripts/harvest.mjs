@@ -59,13 +59,41 @@ async function openPage(url, viewportName, opts = {}) {
   // Mobile-only templates key off the UA/isMobile flags, not the viewport width, so a
   // --device pass can keep the documented 390x844 coordinate space while still getting
   // the phone markup.
+  const headers = flags.referer ? { referer: flags.referer } : {}
   const contextOptions = device
-    ? { ...device, viewport: { width: vp.width, height: vp.height }, deviceScaleFactor: vp.deviceScaleFactor }
-    : { viewport: vp, userAgent: UA }
+    ? { ...device, viewport: { width: vp.width, height: vp.height }, deviceScaleFactor: vp.deviceScaleFactor, extraHTTPHeaders: headers }
+    : { viewport: vp, userAgent: UA, extraHTTPHeaders: headers }
   const ctx = await browser.newContext(contextOptions)
   const page = await ctx.newPage()
   await page.goto(url, { waitUntil: 'domcontentloaded', timeout: 45000 })
   await page.waitForLoadState('networkidle', { timeout: 10000 }).catch(() => {})
+  if (flags['accept-cookies']) {
+    const labels = ['Accept Cookies', 'Accept all', 'Accept All', 'I Accept', 'Agree', 'Got it']
+    const clickIn = async (frame) => {
+      for (const label of labels) {
+        const btn = frame.getByRole('button', { name: label, exact: false }).first()
+        if (await btn.count().catch(() => 0)) {
+          await btn.click({ timeout: 3000 }).catch(() => {})
+          await page.waitForTimeout(800)
+          return true
+        }
+      }
+      return false
+    }
+    let clicked = await clickIn(page)
+    if (!clicked) {
+      // Consent managers often live in a cross-origin iframe and mount late.
+      const deadline = Date.now() + 8000
+      while (!clicked && Date.now() < deadline) {
+        for (const frame of page.frames()) {
+          if (frame === page.mainFrame()) continue
+          if (await clickIn(frame)) { clicked = true; break }
+        }
+        if (!clicked) await page.waitForTimeout(400)
+      }
+    }
+    if (clicked) await page.waitForTimeout(1500)
+  }
   await page.evaluate(async () => {
     const step = window.innerHeight
     for (let y = 0; y < document.body.scrollHeight; y += step) {
@@ -283,11 +311,13 @@ async function main() {
       console.log(`harvest.mjs — DOM harvesting for uBlock rule generation
 
 Usage:
-  screenshot <url> [--viewport=desktop|mobile] [--device=<name>] [--full] [--out=dir]
+  screenshot <url> [--viewport=desktop|mobile] [--device=<name>] [--full] [--out=dir] [--referer=<url>] [--accept-cookies]
       Screenshot the page at a fixed viewport (default desktop 1440x900, mobile 390x844).
       Also saves full page HTML next to the PNG. --full captures full-page screenshot.
       --device='Pixel 7' sends a phone UA + isMobile so mobile-only templates render;
       combine with --viewport to keep the fixed coordinate space.
+      --referer sets the Referer header (bypasses some paywalls/meters).
+      --accept-cookies clicks a common consent button before capturing.
 
   find <url> <x> <y> [--viewport=desktop|mobile] [--device=<name>] [--scroll=pixels]
       Dump the ancestor chain of the element at pixel (x,y), deepest first.
