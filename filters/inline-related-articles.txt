@@ -38,3 +38,5 @@ zdnet.com##.zd-related-stories
 theguardian.com##figure[data-spacefinder-role="richLink"]
 
 gvm.com.tw##p:has-text(延伸閱讀：)
+
+ft.com##aside[data-component="recommended"]
