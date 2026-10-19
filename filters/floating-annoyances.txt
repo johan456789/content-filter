@@ -226,3 +226,8 @@ talk.ltn.com.tw##.function[data-desc="功能列"] > :is(.shareline, .sharetwitte
 
 ! talk.ltn.com.tw fixed TOP back-to-top button (same #top widget as the other ltn subdomains)
 talk.ltn.com.tw###top
+
+! cn.nytimes.com "Top 10 in article" ribbon: fixed full-width bar at the bottom edge
+! with 4 numbered story cards, covering the article. The show/hide is a transform
+! on .ribbon-show/.ribbon-hide, so display:none is enough.
+cn.nytimes.com##.article-ribbon
