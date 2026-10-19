@@ -111,6 +111,19 @@ After committing, take **cropped** before/after screenshots showing the element:
 
 This gives the user a clear visual confirmation the filter works.
 
+### 8. Wait for user approval before merge and push (MANDATORY)
+
+After step 7, **stop and wait**. Do **not** move `main` (merge) or push to the
+remote until the user explicitly approves the rule in the thread (e.g. "looks good",
+"ship it", "approve"). Until then:
+
+- Keep the commit local to your workspace.
+- Do not update `label.txt` (the review dataset label is only finalized at close).
+- If the user turns the rule down, set the label to `deny` and do not merge or push.
+
+Only after explicit approval: move `main` to your commit (merge), push, and write
+`label.txt` as `approve`.
+
 ## Version control (jj)
 
 This repo is a **colocated jj + git** repo. Use `jj` for everything; treat `git` as read-only.
@@ -179,9 +192,10 @@ Write as the session progresses, never in bulk at the end:
   before/after pairs (keep the harvest's pair name; before keeps its odd number so
   `before` sorts before `after`). Non-pair screenshots are not dataset items
 - `rule.txt` — the final `domain##selector` the session produced
-- `label.txt` — `approve` or `deny`, decided at close: `approve` = the rule was merged
-  to main and pushed, `deny` = the user turned it down. Do not guess from message
-  keywords; the user's decision in the thread is the label
+- `label.txt` — `approve` or `deny`, decided at close: `approve` = the user approved
+  and the rule was merged to main and pushed, `deny` = the user turned it down. Do not
+  guess from message keywords; the user's decision in the thread is the label.
+  **Never merge or push before the user explicitly approves** (see step 8).
 
 Rules: images come only from the live session captures and user uploads — never
 re-navigate, re-capture or back-fill items. If a capture is missing, write
