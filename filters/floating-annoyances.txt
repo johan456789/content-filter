@@ -236,3 +236,5 @@ cn.nytimes.com##.article-ribbon
 ! article column. Static class in the served HTML; JS only flips inline visibility/display,
 ! so plain display:none wins.
 thehackernews.com##.float-share
+
+www.kocpc.com.tw##span.koc-post-actions
