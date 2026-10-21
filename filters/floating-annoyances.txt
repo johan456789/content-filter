@@ -244,3 +244,8 @@ www.kocpc.com.tw##span.koc-post-actions
 ! inline bottom: on #topBtn is set by JS), so plain display:none holds while scrolling.
 moda.gov.tw##.themeNav
 moda.gov.tw##a#topBtn
+
+! Wiz blog share icon row (X / LinkedIn / Reddit) in the article header byline and the
+! one repeated under the article. The wrappers are Tailwind layout divs, so anchor on
+! the aria-labels of the share buttons instead.
+www.wiz.io##div:has(> div > button[aria-label="twitter"])
