@@ -169,6 +169,7 @@ technews.tw###scrollup
 taiwannews.com.tw##section:has(> a[href^="/en/topic/"])
 global.udn.com##aside.article-toolbox
 reuters.com##div[data-testid="ArticleToolbar"][class*="info-content"]
+reuters.com##header[data-testid="SiteHeader"] div[class*="inner-sticky"]:style(top: 0px !important;)
 
 techradar.com###utility-bar
 
