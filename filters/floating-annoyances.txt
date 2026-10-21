@@ -238,3 +238,9 @@ cn.nytimes.com##.article-ribbon
 thehackernews.com##.float-share
 
 www.kocpc.com.tw##span.koc-post-actions
+
+! moda.gov.tw right-edge utility rail: fixed dark-mode/theme toggle tab (.themeNav) plus the
+! fixed round back-to-top button (#topBtn). Both are static in the served HTML (only an
+! inline bottom: on #topBtn is set by JS), so plain display:none holds while scrolling.
+moda.gov.tw##.themeNav
+moda.gov.tw##a#topBtn
