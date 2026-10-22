@@ -250,3 +250,12 @@ moda.gov.tw##a#topBtn
 ! one repeated under the article. The wrappers are Tailwind layout divs, so anchor on
 ! the aria-labels of the share buttons instead.
 www.wiz.io##div:has(> div > button[aria-label="twitter"])
+
+! money.udn.com mobile article: fixed red "打開 App" smart-banner pill (bottom: 112px,
+! JS flips it from display:none on scroll), the fixed bottom utility bar
+! (listen / font size / LINE / FB) and the round back-to-top chevron above its right
+! end. All classes are static in the served HTML; the wrapper is served twice, so both
+! matches go.
+money.udn.com##.open-on-app__button
+money.udn.com##.sidebar__tools
+money.udn.com##.aside-btn-wrapper
