@@ -259,3 +259,9 @@ www.wiz.io##div:has(> div > button[aria-label="twitter"])
 money.udn.com##.open-on-app__button
 money.udn.com##.sidebar__tools
 money.udn.com##.aside-btn-wrapper
+
+! aws.amazon.com blog: fixed feedback star button pinned to the right viewport edge,
+! floating over the article text. The button's own class is hashed (rggn_*), so anchor
+! on its stable data-testid and hide its fixed wrapper instead of just the button,
+! leaving no transparent click-blocking overlay behind.
+aws.amazon.com##div:has(> div > button[data-testid="feedback-button"])
