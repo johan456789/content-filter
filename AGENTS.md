@@ -250,6 +250,21 @@ Rules: images come only from the live session captures and user uploads — neve
 re-navigate, re-capture or back-fill items. If a capture is missing, write
 `label.txt` with the label and note the gap in a `note.txt` instead of inventing data.
 
+**Lint before cleanup.** Run the linter on the session folder before copying it out:
+
+```bash
+bun scripts/dataset-lint.mjs dataset/<epoch>-<slug>/    # or no path: every folder
+bun scripts/dataset-lint.mjs dataset/<epoch>-<slug>/ --fix   # repair pair names
+bun scripts/dataset-lint.mjs --session <ses_id>              # judge for a missed reject
+```
+
+It checks pair numbering and sort order, `rule.txt`, `label.txt`, annotation presence,
+`rejected-N/` completeness, and flags one session split across folders. `--fix` only
+renames pair files; everything else needs a human decision. `--session` lists that
+session's pushback-looking user turns plus every rule line it posted — compare them with
+`rule.txt` to spot an iteration that was turned down and never closed as `rejected-N/`.
+Fix all errors before copying the folder into the main checkout.
+
 **Move the dataset out before cleanup.** `dataset/` is gitignored, so merging the
 branch does not carry it out of a workspace. Before removing a workspace, copy the
 session folder into the main checkout's `dataset/` and verify it landed there:

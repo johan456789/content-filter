@@ -5,7 +5,8 @@
   "type": "module",
   "scripts": {
     "harvest": "bun scripts/harvest.mjs",
-    "agent-workspace": "bun scripts/agent-workspace.mjs"
+    "agent-workspace": "bun scripts/agent-workspace.mjs",
+    "dataset-lint": "bun scripts/dataset-lint.mjs"
   },
   "dependencies": {
     "playwright": "^1.62.1"
