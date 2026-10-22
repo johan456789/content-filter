@@ -68,7 +68,7 @@ async function openPage(url, viewportName, opts = {}) {
   await page.goto(url, { waitUntil: 'domcontentloaded', timeout: 45000 })
   await page.waitForLoadState('networkidle', { timeout: 10000 }).catch(() => {})
   if (flags['accept-cookies']) {
-    const labels = ['Accept Cookies', 'Accept all', 'Accept All', 'I Accept', 'Agree', 'Got it']
+    const labels = ['Accept Cookies', 'Accept all', 'Accept All', 'I Accept', 'I Consent', 'Agree', 'Got it']
     const clickIn = async (frame) => {
       for (const label of labels) {
         const btn = frame.getByRole('button', { name: label, exact: false }).first()
