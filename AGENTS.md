@@ -118,11 +118,13 @@ remote until the user explicitly approves the rule in the thread (e.g. "looks go
 "ship it", "approve"). Until then:
 
 - Keep the commit local to your workspace.
-- Do not update `label.txt` (the review dataset label is only finalized at close).
-- If the user turns the rule down, set the label to `deny` and do not merge or push.
+- Do not update the root `label.txt` (the session label is only finalized at close).
+- If the user turns the candidate down — including partial feedback that names a missed
+  element — close it as `rejected-N/` immediately (see *Review dataset*) and do not merge
+  or push.
 
-Only after explicit approval: move `main` to your commit (merge), push, and write
-`label.txt` as `approve`.
+Only after explicit approval: move `main` to your commit (merge), push, and write the
+root `label.txt` as `approve`. If the session ships nothing, write it as `deny`.
 
 ## Version control (jj)
 
@@ -182,20 +184,67 @@ Rules inside a workspace:
 
 Every working session must also capture the review dataset — nothing reconstructed later.
 
+A dataset item is **one candidate rule set plus the before/after pair captured for it,
+with its own label**. A session that iterates produces one item per iteration: the
+accepted candidate at the session root, every turned-down candidate in `rejected-N/`.
+An iteration that is not labelled as a reject is a lost datapoint.
+
 For the session, create `dataset/<epoch>-<slug>/` (epoch = UTC epoch seconds at session
 start, so folders sort chronologically, e.g. `dataset/1760935542-storm-threads-bar/`).
-Write as the session progresses, never in bulk at the end:
+
+### Layout
+
+```
+dataset/<epoch>-<slug>/
+├── input-annotation-1.png          user's file, unmodified and uncropped
+├── output-1-before-<name>.png      pair of the accepted candidate
+├── output-2-after-<name>.png
+├── rule.txt                        accepted rule set, verbatim as shipped
+├── label.txt                       approve | deny
+├── note.txt                        optional: gaps, caveats, provenance
+├── rejected-1/                     one folder per candidate the user turned down
+│   ├── rule.txt                    the candidate exactly as it was posted
+│   ├── label.txt                   deny
+│   ├── note.txt                    the user's reject reason, quoted
+│   ├── output-1-before-<name>.png
+│   └── output-2-after-<name>.png
+└── rejected-2/                     numbered in order of rejection
+    └── ...
+```
 
 - `input-annotation-N.<ext>` — the user's annotated screenshot(s), the exact files they
   sent, unmodified and uncropped
 - `output-N-before-<name>.png` / `output-N-after-<name>.png` — the session's own harvest
   before/after pairs (keep the harvest's pair name; before keeps its odd number so
   `before` sorts before `after`). Non-pair screenshots are not dataset items
-- `rule.txt` — the final `domain##selector` the session produced
+- `rule.txt` — the `domain##selector` set, one rule per line, as shipped
 - `label.txt` — `approve` or `deny`, decided at close: `approve` = the user approved
   and the rule was merged to main and pushed, `deny` = the user turned it down. Do not
   guess from message keywords; the user's decision in the thread is the label.
   **Never merge or push before the user explicitly approves** (see step 8).
+
+### Rejected candidates
+
+- **Close the iteration the moment the user turns a candidate down** — before amending the
+  commit, rewriting `rule.txt`, or designing the next selector. Feedback that names a
+  missing element ("you missed the scroll-to-top button") is a rejection, not a
+  continuation: `rejected-N/` is written first, then the next candidate is designed.
+- `rejected-N/` holds the candidate verbatim, `label.txt: deny`, a `note.txt` quoting the
+  user's reason, and that candidate's own before/after pair. N increments per rejection;
+  never merge two rejections into one folder.
+- **Copy, don't move.** The rejected pair is copied into `rejected-N/`; the accepted pair
+  keeps its `output-N` numbering at the root (1→2, 3→4). A duplicate PNG is cheaper than a
+  lost datapoint.
+- **Never re-label or rewrite a `rejected-N/` folder later.** A candidate that was
+  rejected and then fixed is two items, not one.
+- **Capture the pair in the state where the element is visible** — scrolled, if the widget
+  only renders after scrolling. A pair that silently misses the element the user later
+  names is evidence the candidate was incomplete; keep it anyway.
+- **Never rebuild a rejected item from memory.** If the rule text was already lost to an
+  amend, recover it from the old commit (`git show <commit>:filters/<file>.txt` — read-only
+  git is fine) and record the source commit in `note.txt`.
+- When the session ships nothing, the root `label.txt` is `deny` and the root holds the
+  last candidate; earlier ones sit in `rejected-1…N-1/`.
 
 Rules: images come only from the live session captures and user uploads — never
 re-navigate, re-capture or back-fill items. If a capture is missing, write
