@@ -40,3 +40,6 @@ theguardian.com##figure[data-spacefinder-role="richLink"]
 gvm.com.tw##p:has-text(延伸閱讀：)
 
 ft.com##aside[data-component="recommended"]
+
+foxbusiness.com##section.recommended-videos
+foxbusiness.com##.article-body p:has(> a[target="_blank"] > strong)
