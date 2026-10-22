@@ -43,3 +43,4 @@ ft.com##aside[data-component="recommended"]
 
 foxbusiness.com##section.recommended-videos
 foxbusiness.com##.article-body p:has(> a[target="_blank"] > strong)
+nbcnews.com##[data-activity-map="bacon-article-body-for-subscribers-carousel"]
