@@ -118,13 +118,16 @@ remote until the user explicitly approves the rule in the thread (e.g. "looks go
 "ship it", "approve"). Until then:
 
 - Keep the commit local to your workspace.
-- Do not update the root `label.txt` (the session label is only finalized at close).
+- Do not write the dataset item's `label.txt` yet (the label is only finalized at close).
 - If the user turns the candidate down — including partial feedback that names a missed
   element — close it as `rejected-N/` immediately (see *Review dataset*) and do not merge
   or push.
 
 Only after explicit approval: move `main` to your commit (merge), push, and write the
-root `label.txt` as `approve`. If the session ships nothing, write it as `deny`.
+dataset item's `label.txt` (`dataset/<epoch>-<slug>/label.txt`) as `approve`. If the
+session ships nothing, write that same file as `deny`. Nothing outside the item folder
+is a label: there is no repo-root `label.txt`, and `scripts/dataset-lint.mjs` only reads
+`label.txt` inside `dataset/<epoch>-<slug>/` and its `rejected-N/` subfolders.
 
 ## Version control (jj)
 
@@ -243,8 +246,8 @@ dataset/<epoch>-<slug>/
 - **Never rebuild a rejected item from memory.** If the rule text was already lost to an
   amend, recover it from the old commit (`git show <commit>:filters/<file>.txt` — read-only
   git is fine) and record the source commit in `note.txt`.
-- When the session ships nothing, the root `label.txt` is `deny` and the root holds the
-  last candidate; earlier ones sit in `rejected-1…N-1/`.
+- When the session ships nothing, the item's root `label.txt` is `deny` and the item folder
+  holds the last candidate; earlier ones sit in `rejected-1…N-1/`.
 
 Rules: images come only from the live session captures and user uploads — never
 re-navigate, re-capture or back-fill items. If a capture is missing, write
