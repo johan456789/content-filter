@@ -265,3 +265,14 @@ money.udn.com##.aside-btn-wrapper
 ! on its stable data-testid and hide its fixed wrapper instead of just the button,
 ! leaving no transparent click-blocking overlay behind.
 aws.amazon.com##div:has(> div > button[data-testid="feedback-button"])
+
+! trendmicro.com research articles: Equally.ai accessibility FAB bottom-left (round person icon).
+! The whole widget is injected by widget.equally.ai into #equally-ai___init-access-tool, and the
+! visible button lives in that host's shadow DOM, so hide the injected root instead of the
+! <equally-widget-ui> host (which would leave the empty panel/frame wrappers behind).
+www.trendmicro.com###equally-ai___init-access-tool
+
+! trendmicro.com research articles: fixed red circular scroll button bottom-right (#page-scroll,
+! flips to a check mark once you reach the end of the article). ID comes from the site's JS but is
+! stable across desktop and mobile; nothing else on the page uses it.
+www.trendmicro.com###page-scroll
