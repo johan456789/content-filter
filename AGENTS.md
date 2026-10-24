@@ -107,7 +107,10 @@ After committing, take **cropped** before/after screenshots showing the element:
 2. Take a **before** screenshot cropped to the relevant area (viewport only, not full-page)
 3. Hide the element with JavaScript: `document.querySelector('<selector>').style.display = 'none'`
 4. Take an **after** screenshot from the same scroll position, same crop
-5. Upload both to the thread
+5. **Actually upload both to the thread** — saving the files locally is not sending them.
+   In kimaki: `kimaki upload-to-discord <before.png> <after.png>` (absolute paths, before first).
+   Confirm the command printed `{"uploaded":[...]}` before telling the user the screenshots
+   are attached, and send them in the same turn as the candidate rule — never wait to be asked.
 
 This gives the user a clear visual confirmation the filter works.
 
