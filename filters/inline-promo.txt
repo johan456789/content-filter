@@ -74,3 +74,4 @@ howtogeek.com##.w-google-addus-btn--article-header-variants.is-mobile-only
 
 gvm.com.tw##.article-head_marketing
 reuters.com##p[data-testid="promo-box"]
+smithsonianmag.com##iframe[src*="video.disney.com/embed"]
