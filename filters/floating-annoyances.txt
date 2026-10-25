@@ -281,3 +281,5 @@ www.trendmicro.com###page-scroll
 ! copy of the row sits in a d_none sm:d_block wrapper and follows a button, not a nav, so the
 ! nav + sibling anchor only matches this one.
 socket.dev##nav + ul.li-t_none
+
+news.pts.org.tw##div[x-data="privacyAlert"]
