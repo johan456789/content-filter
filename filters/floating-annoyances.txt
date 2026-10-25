@@ -283,3 +283,8 @@ www.trendmicro.com###page-scroll
 socket.dev##nav + ul.li-t_none
 
 news.pts.org.tw##div[x-data="privacyAlert"]
+
+! amnesty.tw (國際特赦組織台灣分會) article pages: fixed bottom cookie-consent bar from the
+! cookiesjsr library. `.cookiesjsr-banner` is the library's own static class (present in the raw
+! HTML, no inline style), and it is the only match on both desktop and mobile.
+amnesty.tw##.cookiesjsr-banner
