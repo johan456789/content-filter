@@ -46,3 +46,5 @@ foxbusiness.com##.article-body p:has(> a[target="_blank"] > strong)
 nbcnews.com##[data-activity-map="bacon-article-body-for-subscribers-carousel"]
 
 uk.pcmag.com##.related-stories
+
+theregister.com##.articleList
