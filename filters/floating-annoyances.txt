@@ -88,6 +88,7 @@ tomsguide.com###utility-bar
 cna.com.tw##.articleTopBtnBox
 cna.com.tw##.line-ad
 cna.com.tw##.language-bar
+cna.com.tw###crossAdWrapper
 
 theguardian.com##aside:has(> gu-island[name="StickyBottomBanner"])
 androidcentral.com##section#upnext-ribbon
