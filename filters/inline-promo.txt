@@ -53,6 +53,7 @@ setn.com##.ai_article_wrap
 news.ebc.net.tw##.article_content div.inline_text:has(a[href*="app_setup_page"])
 upmedia.mg##.publish > .publish-img
 upmedia.mg##.publish > .publish-pc:style(display: none !important;)
+upmedia.mg##.ad-detail:has(> div[data-cad="adc2"][data-locationid="63"])
 storm.mg##[google-add-preferred-source-btn]
 
 news.sky.com##p:has-text("More from Sky News")
