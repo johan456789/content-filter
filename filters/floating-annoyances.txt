@@ -277,6 +277,11 @@ www.trendmicro.com###equally-ai___init-access-tool
 ! stable across desktop and mobile; nothing else on the page uses it.
 www.trendmicro.com###page-scroll
 
+! investopedia.com term pages: fixed bottom-right video card ("How to Reach Financial Freedom"
+! playlist, JW Player broad video). The class is a static BEM component name in the served HTML,
+! unique on the page; the is-hidden toggle is JS-driven, so the plain rule holds.
+investopedia.com##.mntl-jwplayer-broad
+
 ! socket.dev article header on mobile: X / RSS icon row under the Table of Contents. The desktop
 ! copy of the row sits in a d_none sm:d_block wrapper and follows a button, not a nav, so the
 ! nav + sibling anchor only matches this one.
