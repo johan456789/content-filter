@@ -293,3 +293,9 @@ news.pts.org.tw##div[x-data="privacyAlert"]
 ! cookiesjsr library. `.cookiesjsr-banner` is the library's own static class (present in the raw
 ! HTML, no inline style), and it is the only match on both desktop and mobile.
 amnesty.tw##.cookiesjsr-banner
+
+! minimaxir.com (Max Woolf's Blog) article pages: the floating "go to top" double-chevron button
+! bottom-right. `a#top-link` is the only element with that id in the raw HTML and the only match
+! on the page. The `hidden` class is toggled by the window.onscroll handler, so it is not used as
+! an anchor; the plain rule holds because nothing re-injects the element.
+minimaxir.com##a#top-link
