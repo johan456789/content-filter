@@ -327,3 +327,6 @@ ettoday.net##.gototop
 ! static markup at the top of <body> in the raw HTML, the only `.et_push_notification` element.
 ! Its inline `display: block` is not !important, so the plain rule holds.
 ettoday.net##.et_push_notification
+
+! shopee.tw homepage: fixed bottom-right "瓜分蝦幣" coin widget (section id is stable; close button .agQuat).
+shopee.tw###HomePageFloatingBannerSection
