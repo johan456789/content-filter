@@ -337,3 +337,4 @@ rela.dev##.barstool.highlighted > span:nth-of-type(1)
 
 ! www.youtube.com: "Ask ✦ Gemini" button in the "Ask about this video" panel.
 www.youtube.com###footer > yt-chat-input-view-model > div > button-view-model
+openai.com##[data-article-hero-copy-region="support"]
