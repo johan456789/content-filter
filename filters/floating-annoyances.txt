@@ -300,3 +300,9 @@ amnesty.tw##.cookiesjsr-banner
 ! on the page. The `hidden` class is toggled by the window.onscroll handler, so it is not used as
 ! an anchor; the plain rule holds because nothing re-injects the element.
 minimaxir.com##a#top-link
+
+! news.pts.org.tw (PNN) article pages: the share row under the video (Facebook, LINE, X, copy-link)
+! plus the 讚 like counter. `.share-list-bottom` is the only element with that class in the raw HTML
+! and the only match on desktop and mobile; the like button sits inside it, so one rule hides both.
+! Nothing re-injects it and it has no inline style, so the plain rule holds.
+news.pts.org.tw##.share-list-bottom
