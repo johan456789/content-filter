@@ -161,6 +161,8 @@ is a label: there is no repo-root `label.txt`, and `scripts/dataset-lint.mjs` on
 
 ## Version control (jj)
 
+- Local `deploy: …` commits are GitHub Pages deploy commits. When `jj` abandons one during a fetch, that is expected. Do not warn about it or offer to restore it.
+
 This repo is a **colocated jj + git** repo. Use `jj` for everything; treat `git` as read-only.
 
 - **No staging.** Every `jj` command snapshots the working copy into `@` — saving a file puts it in `@` immediately.
