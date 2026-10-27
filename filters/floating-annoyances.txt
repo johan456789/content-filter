@@ -330,3 +330,7 @@ ettoday.net##.et_push_notification
 
 ! shopee.tw homepage: fixed bottom-right "瓜分蝦幣" coin widget (section id is stable; close button .agQuat).
 shopee.tw###HomePageFloatingBannerSection
+
+! rela.dev homepage: fixed bottom-left "Try the better menubar" Barstool promo card (banner image + promo span).
+rela.dev##[src*="\/assets\/landing\/barstool-rela\.png"]
+rela.dev##.barstool.highlighted > span:nth-of-type(1)
