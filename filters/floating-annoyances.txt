@@ -335,5 +335,5 @@ shopee.tw###HomePageFloatingBannerSection
 rela.dev##[src*="\/assets\/landing\/barstool-rela\.png"]
 rela.dev##.barstool.highlighted > span:nth-of-type(1)
 
-! www.youtube.com: "Ask ✦ Gemini" button in the "Ask about this video" panel footer (unvalidated on live page, see commit body).
+! www.youtube.com: "Ask ✦ Gemini" button in the "Ask about this video" panel.
 www.youtube.com###footer > yt-chat-input-view-model > div > button-view-model
