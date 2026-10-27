@@ -4,7 +4,7 @@ Turn "this element on this page annoys me" into a uBlock Origin rule stored in t
 **Input:** a URL, plus usually **screenshots sent by the user** (often with an annotation circle drawn on them) and/or a text description of the annoying element.
 **Output:** a `domain##selector` uBlock cosmetic filter appended to the matching local filter file. Emit one rule by default — add a `:style(...)` variant or fallback only when you can name a concrete reason (inline `display` style, JS re-injection, etc.). See `prompts/robust-rule.md` §7.
 
-**The user never pastes HTML or element selectors.** If they do, that's the legacy flow — just make their selector robust and return a rule.
+**The user rarely pastes element selectors.** If they do, that's the legacy flow — just make their selector robust and return a rule. If they send an HTML file of the page, follow step 1b and render from that HTML.
 
 ## Setup (first time only)
 
@@ -29,6 +29,31 @@ bun scripts/harvest.mjs screenshot <url> --viewport=mobile --out=tmp/
 - If the element might be below the fold, also take `--full` (full-page screenshot) for desktop.
 
 **Why this step even when the user already sent a screenshot:** the user's screenshot is likely at a different size/scale (a phone capture, an arbitrary browser window). It tells you *which element* to block; this canonical screenshot gives you *exact coordinates* that `find` can consume. Do **not** upload these for the user to annotate — the user annotates their own copy. These are only used internally for coordinate mapping and for the before/after in step 7.
+
+### 1b. User-provided HTML: render from that HTML, not the live page
+
+When the user sends a saved page (`.html` attachment, or HTML pasted as a message), the HTML is
+the page **they** saw. Use it as the render source for screenshots:
+
+1. Save it as-is to `tmp/<domain>-user.html` (do not edit it).
+2. Render it with Playwright, served from the page's real origin so relative URLs, CSS and
+   images resolve. Use `page.route(<origin>/__render__, ...)` to fulfil the document with the
+   file's contents, then `page.goto` that URL. Do the same at the viewport the user's page was
+   captured at (desktop 1440×900 unless the HTML shows otherwise), and take the mobile
+   canonical as well when the element may be mobile-only.
+3. Confirm the target is present in the render (`querySelectorAll(<selector>).length`) before
+   relying on it. If it is absent, say so; do not guess.
+4. Use these renders as the **before** and **after** pairs (step 7). Keep the user's HTML
+   and the renders in the dataset item as provenance (note it in `note.txt`).
+5. Still run `validate` (step 5) on the live URL. The rule must match the live page, not just
+   the snapshot. If the live page does not show the element, say so in the reply.
+
+Caveats to note in `note.txt`:
+- A saved page is a DOM snapshot taken after the site's scripts ran. Re-running those scripts
+  in the render can duplicate `document.write` ad markup, so repeated elements in the render may
+  be artifacts. Compare against the user's view before blaming the rule.
+- Headless renders can differ from the user's browser: consent or push prompts may appear or
+  not, and ad slots may load differently. Record what you saw.
 
 ### 2. Locate the annoying element
 
@@ -103,6 +128,8 @@ Rationale (1–2 sentences on what you anchored on / avoided) goes in the commit
 
 After committing, take **cropped** before/after screenshots showing the element:
 
+0. If the user provided HTML, render the before/after from that HTML (step 1b), not the live page.
+   Otherwise use the live page.
 1. Navigate to the page and scroll so the target element is visible in the viewport
 2. Take a **before** screenshot cropped to the relevant area (viewport only, not full-page)
 3. Hide the element with JavaScript: `document.querySelector('<selector>').style.display = 'none'`
