@@ -106,3 +106,8 @@ talk.ltn.com.tw##div[id^="ad-"][id*="IR1"], p.before_ir
 www.kocpc.com.tw##.single_ads
 www.kocpc.com.tw##.koc-article-sidebar-ad-stack
 reuters.com##div[data-testid="LeaderboardSpace"]
+
+! ettoday.net article pages: an empty "黃金文字 ad_txt_3" text-ad slot (`#ticker_3`) sits between
+! the top nav and the article. It renders at 0px height but keeps 30px top and bottom margins,
+! leaving a blank gray band. `.ad_txt_3` is static in the raw HTML and the only match on the page.
+ettoday.net##.ad_txt_3

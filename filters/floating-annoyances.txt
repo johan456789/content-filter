@@ -306,3 +306,24 @@ minimaxir.com##a#top-link
 ! and the only match on desktop and mobile; the like button sits inside it, so one rule hides both.
 ! Nothing re-injects it and it has no inline style, so the plain rule holds.
 news.pts.org.tw##.share-list-bottom
+
+! ettoday.net (ETtoday news article pages), desktop + mobile: the fixed left share rail
+! (`#et_sticky_pc`, Home / Facebook / LINE / Twitter / copy-link). Its id is in the raw HTML
+! and the only match on the page. The JS only sets an inline `height`, so the plain rule holds.
+ettoday.net###et_sticky_pc
+
+! ettoday.net article pages: the "問 AI LIVE" floating bubble bottom-right (Divee widget). The
+! `divee-floating-ask-ai` class is static in the raw HTML and is the only match on the page. The
+! widget's own stylesheet sets `display: flex !important` on a more specific selector, so a plain
+! `display: none` loses to it. `:style()` writes the rule as an inline `!important`, which wins.
+ettoday.net##.divee-floating-ask-ai:style(display: none !important;)
+
+! ettoday.net article pages: the "回到最上面" scroll-to-top button bottom-right. `.gototop` is
+! static in the raw HTML and the only match on the page. Its inline `opacity`/`bottom` are set by
+! the scroll handler, not `display`, so the plain rule holds.
+ettoday.net##.gototop
+
+! ettoday.net article pages: the "歡迎訂閱 ETtoday 新聞推播" web-push prompt (top centre). It is
+! static markup at the top of <body> in the raw HTML, the only `.et_push_notification` element.
+! Its inline `display: block` is not !important, so the plain rule holds.
+ettoday.net##.et_push_notification
