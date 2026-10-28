@@ -50,3 +50,6 @@ uk.pcmag.com##.related-stories
 theregister.com##.articleList
 
 hk.finance.yahoo.com##p:has(> a[href*="utm_campaign=nmgYahoo"]), p:has(+ p > a[href*="utm_campaign=nmgYahoo"])
+
+infoworld.com##.miso-smart-answers-discovery__article
+infoworld.com##.miso-smart-answers-discovery__conversion-ai
