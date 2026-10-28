@@ -78,3 +78,4 @@ reuters.com##p[data-testid="promo-box"]
 smithsonianmag.com##iframe[src*="video.disney.com/embed"]
 
 infoworld.com##.hb-inline-popup
+infoworld.com##div:has(> div > .hb-modal-wrp:not(.hb-inline-popup))
