@@ -278,6 +278,11 @@ www.trendmicro.com###equally-ai___init-access-tool
 ! stable across desktop and mobile; nothing else on the page uses it.
 www.trendmicro.com###page-scroll
 
+! atlasobscura.com article share bar: Share / Email / Audio / Print row under the byline (plus the
+! Google preferred-source button in the same bar). Hidden as a whole so its rules go with it.
+! .ArticleShareBar is a static BEM root class, present once in the raw HTML.
+atlasobscura.com##.ArticleShareBar
+
 ! investopedia.com term pages: fixed bottom-right video card ("How to Reach Financial Freedom"
 ! playlist, JW Player broad video). The class is a static BEM component name in the served HTML,
 ! unique on the page; the is-hidden toggle is JS-driven, so the plain rule holds.

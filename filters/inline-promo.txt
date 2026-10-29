@@ -75,6 +75,11 @@ howtogeek.com##.w-google-addus-btn--article-header-variants.is-mobile-only
 
 gvm.com.tw##.article-head_marketing
 reuters.com##p[data-testid="promo-box"]
+
+! atlasobscura.com in-article promo card ("Atlas Obscura Books: America Obscura", Amazon / B&N
+! buttons). .article-interruptor is the site's in-body promo block; the America Obscura card is the
+! only one on the article page checked, so no further scoping.
+atlasobscura.com##.article-interruptor
 smithsonianmag.com##iframe[src*="video.disney.com/embed"]
 
 infoworld.com##.hb-inline-popup
