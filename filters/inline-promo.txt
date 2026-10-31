@@ -84,3 +84,10 @@ smithsonianmag.com##iframe[src*="video.disney.com/embed"]
 
 infoworld.com##.hb-inline-popup
 infoworld.com##div:has(> div > .hb-modal-wrp:not(.hb-inline-popup))
+
+! techradar.com in-article Kwizly poll ("How focused do you feel at work?"). The poll root
+! .kwizly-quiz has a hashed suffix, so anchor on the ELK slot div that wraps it (id prefix
+! "elk-" is stable, the uuid after it is not). Descendant :has() rather than > so Kwizly
+! injecting an intermediate wrapper doesn't break the match; hiding the slot rather than
+! .kwizly-game-wrapper avoids leaving an empty 250px min-height band behind.
+www.techradar.com##div[id^="elk-"]:has(.kwizly-quiz)
