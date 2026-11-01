@@ -91,3 +91,7 @@ infoworld.com##div:has(> div > .hb-modal-wrp:not(.hb-inline-popup))
 ! injecting an intermediate wrapper doesn't break the match; hiding the slot rather than
 ! .kwizly-game-wrapper avoids leaving an empty 250px min-height band behind.
 www.techradar.com##div[id^="elk-"]:has(.kwizly-quiz)
+! storm.mg's in-article VIP upsell ("訂閱 風傳媒VIP會員，享有零廣告閱讀介面") is a bare
+! <a class="vipSubMsg"> inside an unlabeled wrapper div. Anchor on the stable #editor article
+! container and a direct-child link, so the sidebar copy of the same link (outside #editor) is untouched.
+www.storm.mg###editor div:has(> a.vipSubMsg)
