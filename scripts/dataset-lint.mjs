@@ -145,6 +145,13 @@ async function lintFolder(dir) {
     if (v !== 'approve' && v !== 'deny') errors.push(`root: label.txt must be "approve" or "deny", got "${v}"`)
   }
 
+  const promptPath = path.join(dir, 'prompt.txt')
+  if (!existsSync(promptPath)) {
+    warnings.push('root: no prompt.txt (the user\'s instruction, verbatim)')
+  } else if (!(await readFile(promptPath, 'utf8')).trim()) {
+    warnings.push('root: prompt.txt is empty')
+  }
+
   const files = await lintPairScope(dir, 'root', errors, warnings, fixes)
   if (!files.some((f) => f.startsWith('input-annotation'))) {
     warnings.push('root: no input-annotation file (note it in note.txt if intentional)')

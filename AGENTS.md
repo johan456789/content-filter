@@ -231,6 +231,7 @@ start, so folders sort chronologically, e.g. `dataset/1760935542-storm-threads-b
 
 ```
 dataset/<epoch>-<slug>/
+├── prompt.txt                      the user's instruction, verbatim
 ├── input-annotation-1.png          user's file, unmodified and uncropped
 ├── output-1-before-<name>.png      pair of the accepted candidate
 ├── output-2-after-<name>.png
@@ -247,6 +248,10 @@ dataset/<epoch>-<slug>/
     └── ...
 ```
 
+- `prompt.txt` — the user's instruction that opened the session, copied **verbatim**
+  (typos, casing and extra spaces included; do not tidy it). One instruction per line when
+  the opening message carried several. Later messages are not appended here — a follow-up
+  that turns a candidate down belongs in that candidate's `rejected-N/note.txt`, quoted.
 - `input-annotation-N.<ext>` — the user's annotated screenshot(s), the exact files they
   sent, unmodified and uncropped
 - `output-N-before-<name>.png` / `output-N-after-<name>.png` — the session's own harvest
