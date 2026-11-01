@@ -343,3 +343,11 @@ rela.dev##.barstool.highlighted > span:nth-of-type(1)
 ! www.youtube.com: "Ask ✦ Gemini" button in the "Ask about this video" panel.
 www.youtube.com###footer > yt-chat-input-view-model > div > button-view-model
 openai.com##[data-article-hero-copy-region="support"]
+
+! theatlantic.com article pages with a gift link (?gift=…): the fixed bottom "GIFT ARTICLE / THIS STORY
+! IS FREE TO READ … Subscribe for $2/week" Zephr nudge. The nudge is shipped as a declarative shadow
+! root (<template shadowrootmode="open">) whose host is the only `[data-zephr-sdk-feature-slug]` element,
+! so the rule must reach inside the shadow tree with `:shadow()`. Its own classes (.container, .img,
+! .StandardButton) are generic and `expanded`/`expand-only` are JS state classes, so the data-* host
+! attribute is the anchor.
+theatlantic.com##[data-zephr-sdk-feature-slug]:shadow([data-zephr-container])
