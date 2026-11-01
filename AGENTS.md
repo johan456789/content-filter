@@ -248,10 +248,11 @@ dataset/<epoch>-<slug>/
     └── ...
 ```
 
-- `prompt.txt` — the user's instruction that opened the session, copied **verbatim**
-  (typos, casing and extra spaces included; do not tidy it). One instruction per line when
-  the opening message carried several. Later messages are not appended here — a follow-up
-  that turns a candidate down belongs in that candidate's `rejected-N/note.txt`, quoted.
+- `prompt.txt` — optional: the user's instruction that opened the session, copied
+  **verbatim** (typos, casing and extra spaces included; do not tidy it). One instruction
+  per line when the opening message carried several. Later messages are not appended here —
+  a follow-up that turns a candidate down belongs in that candidate's `rejected-N/note.txt`,
+  quoted. Write it when you have the text; never reconstruct it from memory or a transcript.
 - `input-annotation-N.<ext>` — the user's annotated screenshot(s), the exact files they
   sent, unmodified and uncropped
 - `output-N-before-<name>.png` / `output-N-after-<name>.png` — the session's own harvest

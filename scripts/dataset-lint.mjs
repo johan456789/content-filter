@@ -145,10 +145,9 @@ async function lintFolder(dir) {
     if (v !== 'approve' && v !== 'deny') errors.push(`root: label.txt must be "approve" or "deny", got "${v}"`)
   }
 
+  // prompt.txt is optional; only flag it when present but empty.
   const promptPath = path.join(dir, 'prompt.txt')
-  if (!existsSync(promptPath)) {
-    warnings.push('root: no prompt.txt (the user\'s instruction, verbatim)')
-  } else if (!(await readFile(promptPath, 'utf8')).trim()) {
+  if (existsSync(promptPath) && !(await readFile(promptPath, 'utf8')).trim()) {
     warnings.push('root: prompt.txt is empty')
   }
 
