@@ -355,3 +355,9 @@ theatlantic.com##[data-zephr-sdk-feature-slug]:shadow([data-zephr-container])
 ! www.businesstoday.com.tw article pages: fixed bottom-right "go to top" arrow (#goTopArticle). It is
 ! faded in by jQuery on scroll, and its id is unique and static in both desktop and mobile HTML.
 businesstoday.com.tw##div#goTopArticle
+
+! www.ftc.gov.tw article pages: fixed right-edge "服務中心專線" contact panel (its `<` switch is the tab on the
+! right edge) and the fixed bottom-right "回頂端" arrow. Both are static classes in the raw HTML, and each
+! matches once on the page; the arrow's inline style only sets opacity, so display:none holds.
+www.ftc.gov.tw##.fast-nav-wrap
+www.ftc.gov.tw##.back-top
