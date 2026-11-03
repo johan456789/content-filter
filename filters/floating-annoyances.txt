@@ -361,3 +361,10 @@ businesstoday.com.tw##div#goTopArticle
 ! matches once on the page; the arrow's inline style only sets opacity, so display:none holds.
 www.ftc.gov.tw##.fast-nav-wrap
 www.ftc.gov.tw##.back-top
+
+! www.nownews.com article pages (mobile): fixed top share bar pinned under the header (LINE, copy link,
+! font size, and the bookmark button with its "收藏了嗎？" tooltip). It is `section#toolBoxSticky`, rendered
+! only for the mobile UA and present in the raw mobile HTML; the id is unique and static. The fixed
+! bottom-right "to top" arrow is `.gotop`, faded in on scroll; its class is static and matches once.
+www.nownews.com##section#toolBoxSticky
+www.nownews.com##.gotop
