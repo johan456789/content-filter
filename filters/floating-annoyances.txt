@@ -374,3 +374,9 @@ www.nownews.com##.gotop
 ! name present in the raw page for the mobile UA, and the element is unique. Hiding the parent div removes the strip.
 ! Plain display:none is enough since uBlock's cosmetic rules are !important and the site only toggles `dnone-imp`.
 searchenginejournal.com##div#SEJ_Mobile_Sticky_Bottom-parent
+
+! reddit.com mobile web, logged in: the "Open App" pill in the fixed sub-header (r/<sub> + member count) that
+! slides in under the top bar once you scroll a post. It is a different element from the logged-out top-bar
+! `#open-app-header-cta`, which does not exist on this page. The id is a static semantic name, unique on the
+! page, and the anchor has no inline style, so the plain rule holds.
+reddit.com###sticky-community-header-open-app-cta
