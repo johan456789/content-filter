@@ -368,3 +368,9 @@ www.ftc.gov.tw##.back-top
 ! bottom-right "to top" arrow is `.gotop`, faded in on scroll; its class is static and matches once.
 www.nownews.com##section#toolBoxSticky
 www.nownews.com##.gotop
+
+! searchenginejournal.com article pages (mobile): a fixed bottom ad strip (`#SEJ_Mobile_Sticky_Bottom-parent`, the
+! `SEJ_Mobile_Sticky_Bottom` slot) sits over the bottom share bar and shows an "Ad" label. The id is a static slot
+! name present in the raw page for the mobile UA, and the element is unique. Hiding the parent div removes the strip.
+! Plain display:none is enough since uBlock's cosmetic rules are !important and the site only toggles `dnone-imp`.
+searchenginejournal.com##div#SEJ_Mobile_Sticky_Bottom-parent
