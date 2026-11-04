@@ -111,3 +111,9 @@ reuters.com##div[data-testid="LeaderboardSpace"]
 ! the top nav and the article. It renders at 0px height but keeps 30px top and bottom margins,
 ! leaving a blank gray band. `.ad_txt_3` is static in the raw HTML and the only match on the page.
 ettoday.net##.ad_txt_3
+
+! searchenginejournal.com article pages: in-article ad slots (`SEJ_300x250_UnderPost_N` on desktop, `SEJ_Middle_Post_N_i`
+! and `SEJ_AMP_IN_POST_300x250` on mobile) are each a `div.content-unit` wrapper with an `id` ending in `-parent`. Every
+! match is an ad slot in the article body (3 on the Pixel 7 render, none of them editorial), so one attribute match covers
+! the desktop and mobile templates. The inner `.mmh-90`/`.mh340-wrap` classes are layout, so they are not used.
+searchenginejournal.com##.content-unit[id$="-parent"]
