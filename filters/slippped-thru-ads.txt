@@ -117,3 +117,9 @@ ettoday.net##.ad_txt_3
 ! match is an ad slot in the article body (3 on the Pixel 7 render, none of them editorial), so one attribute match covers
 ! the desktop and mobile templates. The inner `.mmh-90`/`.mh340-wrap` classes are layout, so they are not used.
 searchenginejournal.com##.content-unit[id$="-parent"]
+
+! urbandictionary.com: the top leaderboard ad band sits above the site nav as an empty strip. It is a direct child of
+! `#ud-root`. Its ad slot is `UD25_Leaderboard` on desktop and `UD25_Mobile_Leaderboard` on mobile, and both names contain
+! "Leaderboard". `ud-root` is the app root id, and the `:has()` keeps the rule to the one wrapper, so the rule does not depend on
+! Tailwind classes.
+urbandictionary.com###ud-root > div:has([ot-name*="Leaderboard"])
