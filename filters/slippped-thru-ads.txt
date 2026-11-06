@@ -47,6 +47,7 @@ ithome.com.tw###headerbar
 ithome.com.tw###block-block-33
 ithome.com.tw###block-block-4
 ithome.com.tw##div.side-extra
+ithome.com.tw###hpad930up
 
 3c.ltn.com.tw##div[id^="ad-K"], div#ad-B1-ATF
 3c.ltn.com.tw##div[id^="ad-"][id*="IR1"], p.before_ir
