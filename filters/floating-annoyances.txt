@@ -386,3 +386,14 @@ reddit.com###sticky-community-header-open-app-cta
 ! BEM name in the server HTML, and #gotop is a unique id, so neither depends on JS-injected classes.
 worldjournal.com##aside.article-content__social
 worldjournal.com###gotop
+
+! straitstimes.com article pages (desktop and mobile): the article-top share row (Telegram, Facebook, "...") is
+! `data-testid="social-share-test-id"`, a static test id that appears once per article header. The
+! "Set as preferred source" button and the "Listen" / "Summarise" row each sit in their own
+! `.article-page-grid` block, so hide those blocks with `:has()` on their static test id / class
+! (`google-preferred-source-link-test-id`, `article-actions-scroll`). The preferred-source block also starts with
+! the dashed divider that closes the date/share header (`divider-horizontal-id`), so that rule hides every child
+! except the divider; hiding the whole block would remove the separator under the date.
+straitstimes.com##[data-testid="social-share-test-id"]
+straitstimes.com##.article-page-grid:has(> [data-testid="google-preferred-source-link-test-id"]) > :not([data-testid="divider-horizontal-id"])
+straitstimes.com##.article-page-grid:has(> .article-actions-scroll)
