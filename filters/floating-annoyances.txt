@@ -380,3 +380,9 @@ searchenginejournal.com##div#SEJ_Mobile_Sticky_Bottom-parent
 ! `#open-app-header-cta`, which does not exist on this page. The id is a static semantic name, unique on the
 ! page, and the anchor has no inline style, so the plain rule holds.
 reddit.com###sticky-community-header-open-app-cta
+
+! worldjournal.com article pages: the fixed share column left of the article body (Facebook, WeChat, Line,
+! text size) and the red scroll-to-top button (#gotop) at the bottom right. The aside class is a static
+! BEM name in the server HTML, and #gotop is a unique id, so neither depends on JS-injected classes.
+worldjournal.com##aside.article-content__social
+worldjournal.com###gotop
