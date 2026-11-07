@@ -400,3 +400,6 @@ straitstimes.com##.article-page-grid:has(> .article-actions-scroll)
 
 ! opinion.udn.com back-to-top button: `.gotop` has a static class and is shown by JS on scroll.
 opinion.udn.com##.gotop
+
+! follaw.tw mobile bottom bar: `.fx-btn-group-mb` is a static class in the raw HTML and is a fixed bar (法操543 / 大壯律師 / LINE).
+www.follaw.tw##.fx-btn-group-mb
