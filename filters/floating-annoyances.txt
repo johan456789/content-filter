@@ -408,3 +408,8 @@ www.follaw.tw##.fx-btn-group-mb
 ! to-top plugin's back-to-top arrow (`#to_top_scrollup`, bottom left). Both have static ids/classes
 ! from their plugins and are not toggled by page JS, so one selector list hides both.
 wingverse.com##.chaty-widget, #to_top_scrollup
+
+! euronews.com article pages (mobile): a Dailymotion picture-in-picture video (`#dailymotion-pip`) is a fixed
+! overlay under the header that appears once the article's own video scrolls out of view. The id is injected by the
+! Dailymotion script (not in the static HTML). It has no inline `display`, so plain `display: none` holds on re-scroll.
+euronews.com###dailymotion-pip
