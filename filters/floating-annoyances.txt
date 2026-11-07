@@ -403,3 +403,8 @@ opinion.udn.com##.gotop
 
 ! follaw.tw mobile bottom bar: `.fx-btn-group-mb` is a static class in the raw HTML and is a fixed bar (法操543 / 大壯律師 / LINE).
 www.follaw.tw##.fx-btn-group-mb
+
+! wingverse.com floating widgets: the Chaty contact bubble (`.chaty-widget`, bottom right) and the
+! to-top plugin's back-to-top arrow (`#to_top_scrollup`, bottom left). Both have static ids/classes
+! from their plugins and are not toggled by page JS, so one selector list hides both.
+wingverse.com##.chaty-widget, #to_top_scrollup
