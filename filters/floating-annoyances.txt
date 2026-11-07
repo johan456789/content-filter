@@ -397,3 +397,6 @@ worldjournal.com###gotop
 straitstimes.com##[data-testid="social-share-test-id"]
 straitstimes.com##.article-page-grid:has(> [data-testid="google-preferred-source-link-test-id"]) > :not([data-testid="divider-horizontal-id"])
 straitstimes.com##.article-page-grid:has(> .article-actions-scroll)
+
+! opinion.udn.com back-to-top button: `.gotop` has a static class and is shown by JS on scroll.
+opinion.udn.com##.gotop
