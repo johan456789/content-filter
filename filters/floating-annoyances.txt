@@ -413,3 +413,8 @@ wingverse.com##.chaty-widget, #to_top_scrollup
 ! overlay under the header that appears once the article's own video scrolls out of view. The id is injected by the
 ! Dailymotion script (not in the static HTML). It has no inline `display`, so plain `display: none` holds on re-scroll.
 euronews.com###dailymotion-pip
+
+! theme.npm.edu.tw (National Palace Museum exhibition pages, mobile): a fixed TOP button (`.floatbtn`, bottom right)
+! wraps the back-to-top link. The class is static in the raw HTML and not toggled by JS. The inline
+! `style="display: block;"` is not !important, so uBlock's own `display: none !important` still wins.
+theme.npm.edu.tw##.floatbtn
