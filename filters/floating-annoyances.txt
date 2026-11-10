@@ -78,6 +78,7 @@ techcrunch.com##.wp-block-techcrunch-breaking-news-banner
 
 mobile01.com##div.l-heading > div.l-heading__title > ul.l-toolBar
 mobile01.com##div.docking_share
+wordpress.com###marketingbar
 mobile01.com##div.o-gotop
 mobile01.com##.app-open-btn
 
