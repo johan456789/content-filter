@@ -419,3 +419,6 @@ euronews.com###dailymotion-pip
 ! wraps the back-to-top link. The class is static in the raw HTML and not toggled by JS. The inline
 ! `style="display: block;"` is not !important, so uBlock's own `display: none !important` still wins.
 theme.npm.edu.tw##.floatbtn
+
+# northwave.com.tw - floating scroll-to-top button (SHOPLINE sl-goto-top), overlaps blog text on mobile
+shop.northwave.com.tw##.sl-goto-top
