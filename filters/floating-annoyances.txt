@@ -422,3 +422,20 @@ theme.npm.edu.tw##.floatbtn
 
 # northwave.com.tw - floating scroll-to-top button (SHOPLINE sl-goto-top), overlaps blog text on mobile
 shop.northwave.com.tw##.sl-goto-top
+
+! cars.tvbs.com.tw (article pages, mobile): circled on a user screenshot — the share row
+! (Facebook / Line / Threads / copy-link) under the byline, the floating "不定期抽好禮"
+! promo widget bottom-right with its close button, and the scroll-to-top button above it.
+! The share buttons render inside Astro islands; the host element is stable in the raw HTML
+! (three instances: two mobile rows and the desktop sticky column — all the same widget),
+! anchored on the island's static component-url attribute.
+cars.tvbs.com.tw##astro-island[component-url*="ShareButtons"]
+! The promo widget is served by the Insider (useinsider.com) campaign platform: wrappers are
+! `.ins-preview-wrapper ins-preview-wrapper-<campaignId>` with the campaign id (and creative)
+! rotating per session. The site runs several Insider slots at once — a fixed bottom-right
+! banner and a second floating LINE-加好友/抽好禮 slot whose positional class changes — so hide
+! the platform wrapper generically; every `.ins-preview-wrapper` on this site is a third-party
+! promo campaign, and uBlock's !important display:none beats the wrappers' inline styles.
+cars.tvbs.com.tw##.ins-preview-wrapper
+! Scroll-to-top button: stable aria-label in the raw HTML, class list JS-toggled on scroll.
+cars.tvbs.com.tw##button[aria-label="go to top button"]
