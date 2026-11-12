@@ -53,3 +53,5 @@ hk.finance.yahoo.com##p:has(> a[href*="utm_campaign=nmgYahoo"]), p:has(+ p > a[h
 
 infoworld.com##.miso-smart-answers-discovery__article
 infoworld.com##.miso-smart-answers-discovery__conversion-ai
+
+foxnews.com##.recommended-navbar
