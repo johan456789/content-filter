@@ -450,3 +450,7 @@ npr.org###global-stickybar-mount-piano-wrap:style(display: none !important;)
 ! or the reserved band stays behind.
 newsweek.com##div:has(> div[class*="breakingBarContainer"])
 afp.com##.afp-story-page__share-wrap
+! LTN (Liberty Times) JS-injected web-push subscription dialog (fixed, centered,
+! "感謝您的訂閱" card with 訂閱/暫時不要 buttons). Element is created at runtime
+! with a static class; the injected stylesheet also hides re-created copies.
+news.ltn.com.tw##.softPush_notification
