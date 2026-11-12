@@ -439,3 +439,8 @@ cars.tvbs.com.tw##astro-island[component-url*="ShareButtons"]
 cars.tvbs.com.tw##.ins-preview-wrapper
 ! Scroll-to-top button: stable aria-label in the raw HTML, class list JS-toggled on scroll.
 cars.tvbs.com.tw##button[aria-label="go to top button"]
+! Newsletter sticky popup (Piano iframe, "Sign up ... newsletter") bottom-anchored on story pages.
+! Piano's JS expands #global-stickybar-mount-piano-wrap from 0px height when it shows the
+! offer, so a plain display:none rule can lose to an inline style set at show time —
+! use the :style() variant with !important to defeat the JS toggle.
+npr.org###global-stickybar-mount-piano-wrap:style(display: none !important;)
