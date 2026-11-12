@@ -444,3 +444,8 @@ cars.tvbs.com.tw##button[aria-label="go to top button"]
 ! offer, so a plain display:none rule can lose to an inline style set at show time —
 ! use the :style() variant with !important to defeat the JS toggle.
 npr.org###global-stickybar-mount-piano-wrap:style(display: none !important;)
+
+! Newsweek sticky "breaking/analysis" top bar. Anchor on the semantic class fragment
+! (hash prefixes churn between builds); hide the 58px-tall wrapper, not just the bar,
+! or the reserved band stays behind.
+newsweek.com##div:has(> div[class*="breakingBarContainer"])

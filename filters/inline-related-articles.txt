@@ -55,3 +55,7 @@ infoworld.com##.miso-smart-answers-discovery__article
 infoworld.com##.miso-smart-answers-discovery__conversion-ai
 
 foxnews.com##.recommended-navbar
+
+! Newsweek in-article "Read More" related box; data-gtm-action names the widget itself,
+! stable across CSS-module hash changes.
+newsweek.com##section[data-gtm-action="Read_More"]
