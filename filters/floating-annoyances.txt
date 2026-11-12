@@ -449,3 +449,4 @@ npr.org###global-stickybar-mount-piano-wrap:style(display: none !important;)
 ! (hash prefixes churn between builds); hide the 58px-tall wrapper, not just the bar,
 ! or the reserved band stays behind.
 newsweek.com##div:has(> div[class*="breakingBarContainer"])
+afp.com##.afp-story-page__share-wrap
