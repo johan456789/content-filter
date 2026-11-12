@@ -95,3 +95,9 @@ www.techradar.com##div[id^="elk-"]:has(.kwizly-quiz)
 ! <a class="vipSubMsg"> inside an unlabeled wrapper div. Anchor on the stable #editor article
 ! container and a direct-child link, so the sidebar copy of the same link (outside #editor) is untouched.
 www.storm.mg###editor div:has(> a.vipSubMsg)
+
+! www.tomshardware.com — fixed "Become a member for free" membership signup popup
+! (bottom-left, appears after scrolling ~40% into the article). Anchor on the widget's
+! static flcw-popup-position + custom-widget-membership classes; the site toggles
+! opacity/closedPopup classes on the same element, which display:none !important defeats.
+tomshardware.com##.flcw-popup-position.custom-widget-membership
