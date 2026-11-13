@@ -460,3 +460,17 @@ news.ltn.com.tw##.softPush_notification
 ! source). Tag qualifier needed because the site sets `display: block !important`
 ! on `.scorll-top` in style-new.css; `div.scorll-top` wins on specificity.
 rti.org.tw##div.scorll-top
+
+! FTV www.ftvnews.com.tw — floating AI-anchor widget at right edge (min-xuan
+! photo + "為你推薦" recommendation bubble + X close). Anchored on the fixed
+! wrapper's static Tailwind positional class via attribute-contains, so child
+! class churn (swiper/bubble) can't break it.
+www.ftvnews.com.tw##div[class*="tw-top-2/3"].tw-fixed
+
+! FTV www.ftvnews.com.tw — scroll-to-top pill above the bottom edge (white pill
+! with ^). Own static class, unique on the page.
+www.ftvnews.com.tw##a.go-top
+
+! FTV www.ftvnews.com.tw — LINE/FB/X/link share icons beside the publish time
+! (#Lit_shareTop). Hide the <li> holding them; the timestamp <li> stays.
+www.ftvnews.com.tw###Lit_shareTop > li:has(a.share_twt)

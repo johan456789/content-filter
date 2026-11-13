@@ -130,3 +130,8 @@ urbandictionary.com###ud-root > div:has([ot-name*="Leaderboard"])
 ! exactly one element on the page, the wrapper around that slot. Hiding the wrapper also removes the empty gray strip below the ad.
 developer.mozilla.org##.page-layout__banner
 westernjournal.com##div[id="AC1-ad"]
+
+! FTV www.ftvnews.com.tw — GliaStar "AI NEWS" video ad player that floats over the
+! article bottom-right (black X close + 閱讀文章 pill). Hide its GPT slot by the
+! static id; the fixed floater is a descendant, so it goes with it.
+www.ftvnews.com.tw###div-gpt-ad-gliaplayer-0

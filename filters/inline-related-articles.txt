@@ -64,3 +64,15 @@ newsweek.com##section[data-gtm-action="Read_More"]
 ! after the first paragraph. Anchor on the p containing the bold 相關新聞 label;
 ! the label text is a stable CMS insert, class-less p.
 news.ltn.com.tw##.content p:has(> b:has-text(相關新聞：))
+
+! FTV www.ftvnews.com.tw — top-of-article Taboola placement ("猜你會想看",
+! #taboola-top-article-thumbnails) that renders as a blank gap in Brave.
+! Hide the .mt-20 wrapper (carries the top margin) via :has on the direct child;
+! the child :has arg is exact-id scoped so the generic .mt-20 class never
+! matches the article .container.mt-20 ancestor.
+www.ftvnews.com.tw##div.mt-20:has(> div#taboola-top-article-thumbnails)
+
+! FTV www.ftvnews.com.tw — A-/A/A+ font-size row under the breadcrumb, which
+! leaves a tall band above the headline. Hide its .toolbar wrapper via the static
+! .fontsize child.
+www.ftvnews.com.tw##div.toolbar:has(> div.fontsize)
