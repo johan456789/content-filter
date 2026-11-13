@@ -59,3 +59,8 @@ foxnews.com##.recommended-navbar
 ! Newsweek in-article "Read More" related box; data-gtm-action names the widget itself,
 ! stable across CSS-module hash changes.
 newsweek.com##section[data-gtm-action="Read_More"]
+
+! LTN news.ltn.com.tw — in-article "相關新聞：…" inline related-news link inserted
+! after the first paragraph. Anchor on the p containing the bold 相關新聞 label;
+! the label text is a stable CMS insert, class-less p.
+news.ltn.com.tw##.content p:has(> b:has-text(相關新聞：))
