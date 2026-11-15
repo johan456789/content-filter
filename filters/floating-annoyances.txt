@@ -474,3 +474,7 @@ www.ftvnews.com.tw##a.go-top
 ! FTV www.ftvnews.com.tw — LINE/FB/X/link share icons beside the publish time
 ! (#Lit_shareTop). Hide the <li> holding them; the timestamp <li> stays.
 www.ftvnews.com.tw###Lit_shareTop > li:has(a.share_twt)
+
+! Oxford Learner's Dictionaries — floating "TOP" back-to-top pill at the bottom
+! right corner. Own semantic class, unique on the page (one match).
+www.oxfordlearnersdictionaries.com##a.go-to-top
