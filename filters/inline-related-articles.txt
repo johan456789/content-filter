@@ -76,3 +76,7 @@ www.ftvnews.com.tw##div.mt-20:has(> div#taboola-top-article-thumbnails)
 ! leaves a tall band above the headline. Hide its .toolbar wrapper via the static
 ! .fontsize child.
 www.ftvnews.com.tw##div.toolbar:has(> div.fontsize)
+
+! apnews.com: the "Related Stories" hub peek module under article bodies. Anchored on its
+! gtm headline attribute; the class is a generic list-variant name shared by other modules.
+apnews.com##bsp-list-loadmore[data-gtm-headline="Related Stories"]

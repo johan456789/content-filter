@@ -478,3 +478,8 @@ www.ftvnews.com.tw###Lit_shareTop > li:has(a.share_twt)
 ! Oxford Learner's Dictionaries — floating "TOP" back-to-top pill at the bottom
 ! right corner. Own semantic class, unique on the page (one match).
 www.oxfordlearnersdictionaries.com##a.go-to-top
+
+! apnews.com: UsableNet "Enable accessibility" floating button, fixed bottom-left. Anchored on
+! its fixed id. The site's own stylesheet sets display:inline-block!important on it, so a plain
+! display:none loses; :style() sets an inline !important value that wins.
+apnews.com###usntA40Toggle:style(display: none !important)
