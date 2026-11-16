@@ -135,3 +135,17 @@ westernjournal.com##div[id="AC1-ad"]
 ! article bottom-right (black X close + 閱讀文章 pill). Hide its GPT slot by the
 ! static id; the fixed floater is a descendant, so it goes with it.
 www.ftvnews.com.tw###div-gpt-ad-gliaplayer-0
+
+! themirror.com article pages: the mid-article ad boxes (class BoxStyles_box-container, data-testid
+! commercial-N / non-commercial-N). One of them is the Media.net Shorts "TRENDING NOW" carousel, which
+! renders in a cross-origin iframe, so the box class is the only static hook. The empty boxes fill with
+! ads in some browsers and probably produce the blank grey box after the "winner of a Chanel Bag" paragraph.
+themirror.com##div[class*="BoxStyles_box-container"]
+
+! themirror.com article pages: the in-article Freestar ad slots (div.fs-iai, 280px tall). They are left
+! as blank bands once the boxes above are hidden.
+themirror.com##div.fs-iai
+
+! themirror.com article pages: the "ADVERTISEMENT / SCROLL TO CONTINUE READING" flying-carpet ad (559px)
+! that sits above the Trending carousel. Its empty frame is a 559px white band in the article body.
+themirror.com##div.fs-flying-carpet-v3

@@ -101,9 +101,3 @@ www.storm.mg###editor div:has(> a.vipSubMsg)
 ! static flcw-popup-position + custom-widget-membership classes; the site toggles
 ! opacity/closedPopup classes on the same element, which display:none !important defeats.
 tomshardware.com##.flcw-popup-position.custom-widget-membership
-
-! themirror.com article photo galleries ("View 4 Images" data-testid="image-group"). The first gallery,
-! placed right after the "winner of a Chanel Bag" paragraph, showed as a blank grey box in the user's
-! browser (an image that did not load). The rule hides every gallery on the domain, not just that one,
-! so galleries on other Mirror articles go too.
-themirror.com##[data-testid="image-group"]

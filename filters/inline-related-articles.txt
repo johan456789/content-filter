@@ -84,9 +84,3 @@ apnews.com##bsp-list-loadmore[data-gtm-headline="Related Stories"]
 ! themirror.com article pages: the "READ MORE: <headline>" teaser links inside the article body. The
 ! class is a CSS-module hash (ReadMore_readmore-container__<hash>), so anchor on its stable prefix.
 themirror.com##div[class*="ReadMore_readmore-container"]
-
-! themirror.com article pages: the mid-article Media.net Shorts video carousel ("TRENDING NOW", Watch Now
-! cards), about 2,800px down the article. The carousel renders in a cross-origin iframe, so the page
-! DOM only exposes data-testid="media-net-shorts". The rule anchors on that and hides the BoxStyles
-! commercial wrapper with :has(), so the box's own spacing goes with it.
-themirror.com##div[class*="BoxStyles_box-container"]:has([data-testid="media-net-shorts"])
