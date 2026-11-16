@@ -84,3 +84,8 @@ apnews.com##bsp-list-loadmore[data-gtm-headline="Related Stories"]
 ! themirror.com article pages: the "READ MORE: <headline>" teaser links inside the article body. The
 ! class is a CSS-module hash (ReadMore_readmore-container__<hash>), so anchor on its stable prefix.
 themirror.com##div[class*="ReadMore_readmore-container"]
+
+! space.com article bodies: the "YOU MAY LIKE" and "WHAT TO READ NEXT" recirculation blocks. Both are
+! <aside> elements with the same static data-component-name / data-recirculation-type attributes (2 matches,
+! both inside #article-body). The class list is generic, so anchor on the attributes.
+space.com##aside[data-component-name="Recirculation:ArticleRiver"][data-recirculation-type="inline"]

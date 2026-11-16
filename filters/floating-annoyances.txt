@@ -483,3 +483,8 @@ www.oxfordlearnersdictionaries.com##a.go-to-top
 ! its fixed id. The site's own stylesheet sets display:inline-block!important on it, so a plain
 ! display:none loses; :style() sets an inline !important value that wins.
 apnews.com###usntA40Toggle:style(display: none !important)
+
+! space.com: the "GET SPACE+ ACCESS QUICK" sign-up popup, fixed bottom-left, opened by the site after the
+! reader scrolls down. Anchor on its static #clubPopup id (present in the raw HTML, one match). The site
+! toggles closedPopup on it; the stylesheet hides it while closed, and display:none hides it when open.
+space.com###clubPopup
