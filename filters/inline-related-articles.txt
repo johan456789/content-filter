@@ -89,3 +89,8 @@ themirror.com##div[class*="ReadMore_readmore-container"]
 ! <aside> elements with the same static data-component-name / data-recirculation-type attributes (2 matches,
 ! both inside #article-body). The class list is generic, so anchor on the attributes.
 space.com##aside[data-component-name="Recirculation:ArticleRiver"][data-recirculation-type="inline"]
+
+! www.yahoo.com article bodies: the "More to explore" related-article grid (a 2-column card layout, one
+! per article, usually 3 to 4 per page). The wrapper is rendered client-side with a generated recirc-<uuid>
+! id, so the raw server HTML has no recirc id; anchor on the stable id prefix and scope by the heading text.
+www.yahoo.com##div[id^="recirc-"]:has-text(More to explore)
