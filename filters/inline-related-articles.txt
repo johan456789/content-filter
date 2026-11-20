@@ -94,3 +94,7 @@ space.com##aside[data-component-name="Recirculation:ArticleRiver"][data-recircul
 ! per article, usually 3 to 4 per page). The wrapper is rendered client-side with a generated recirc-<uuid>
 ! id, so the raw server HTML has no recirc id; anchor on the stable id prefix and scope by the heading text.
 www.yahoo.com##div[id^="recirc-"]:has-text(More to explore)
+
+! variety.com article bodies: the mid-article "Related Stories" block. The CMS template
+! wraps it in a static injected-related-story class, present in the raw server HTML.
+variety.com##.injected-related-story
