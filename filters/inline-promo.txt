@@ -17,6 +17,9 @@ futurism.com##.newsletter-content
 digitalcameraworld.com##.newsletter-form__wrapper.newsletter-form__wrapper--inbodyContent
 techradar.com##.newsletter-form__wrapper.newsletter-form__wrapper--inbodyContent
 androidcentral.com##.newsletter-form__wrapper.newsletter-form__wrapper--inbodyContent
+! windowscentral.com: in-body "Get the Windows Central Newsletter" box. Hide the slice container, not just
+! the wrapper, so the rule line above the box goes with it. The slice class is in the raw HTML (one match).
+windowscentral.com##.newsletter-inbodyContent-slice
 variety.com###offer_e15edb56dc7025063457-0
 androidauthority.com##.e_6o
 androidauthority.com##div:has(> a[data-sel="db-link-el"])

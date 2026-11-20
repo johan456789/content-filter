@@ -488,3 +488,7 @@ apnews.com###usntA40Toggle:style(display: none !important)
 ! reader scrolls down. Anchor on its static #clubPopup id (present in the raw HTML, one match). The site
 ! toggles closedPopup on it; the stylesheet hides it while closed, and display:none hides it when open.
 space.com###clubPopup
+
+! windowscentral.com: the "GET INSIDER ACCESS" sign-up popup, fixed bottom-left, opened after the reader
+! scrolls down. Same Future-brand widget as space.com, so anchor on its static #clubPopup id (one match).
+windowscentral.com###clubPopup
