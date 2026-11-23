@@ -104,3 +104,9 @@ www.storm.mg###editor div:has(> a.vipSubMsg)
 ! static flcw-popup-position + custom-widget-membership classes; the site toggles
 ! opacity/closedPopup classes on the same element, which display:none !important defeats.
 tomshardware.com##.flcw-popup-position.custom-widget-membership
+
+! www.cnbc.com: the "Follow your favorite stocks CREATE FREE ACCOUNT" banner just above "In this article"
+! in article bodies. Anchor on the static RelatedQuotes-cfaButtonContainer wrapper (in the raw HTML,
+! not JS-toggled). Hiding the wrapper rather than the button drops its 12px margin too.
+! Two matches on mobile (top and end of article), one on desktop.
+www.cnbc.com##.RelatedQuotes-cfaButtonContainer
