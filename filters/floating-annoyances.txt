@@ -492,3 +492,7 @@ space.com###clubPopup
 ! windowscentral.com: the "GET INSIDER ACCESS" sign-up popup, fixed bottom-left, opened after the reader
 ! scrolls down. Same Future-brand widget as space.com, so anchor on its static #clubPopup id (one match).
 windowscentral.com###clubPopup
+
+! kbro.com.tw: the "回到頁首" (back to top) button, fixed bottom-right over the page. Anchor on its
+! static class `totop` (in raw HTML, never JS-toggled, one match on mobile and desktop).
+kbro.com.tw##a.totop
