@@ -98,3 +98,6 @@ www.yahoo.com##div[id^="recirc-"]:has-text(More to explore)
 ! variety.com article bodies: the mid-article "Related Stories" block. The CMS template
 ! wraps it in a static injected-related-story class, present in the raw server HTML.
 variety.com##.injected-related-story
+! unwire.hk: the "相關文章" (related articles) box after the article body. A semantic
+! aside.related-posts in the raw server HTML; one match on mobile.
+unwire.hk##aside.related-posts

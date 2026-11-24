@@ -496,3 +496,6 @@ windowscentral.com###clubPopup
 ! kbro.com.tw: the "回到頁首" (back to top) button, fixed bottom-right over the page. Anchor on its
 ! static class `totop` (in raw HTML, never JS-toggled, one match on mobile and desktop).
 kbro.com.tw##a.totop
+! unwire.hk: the "you are reading" bar (#top-bar-post-title) that slides in under the fixed header
+! after scrolling. A static id in the raw HTML; one match on mobile.
+unwire.hk###top-bar-post-title
