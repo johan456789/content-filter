@@ -101,3 +101,4 @@ variety.com##.injected-related-story
 ! unwire.hk: the "相關文章" (related articles) box after the article body. A semantic
 ! aside.related-posts in the raw server HTML; one match on mobile.
 unwire.hk##aside.related-posts
+mashable.com##div.mx-auto:has(> div.flex > strong)
