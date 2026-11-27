@@ -149,3 +149,9 @@ themirror.com##div.fs-iai
 ! themirror.com article pages: the "ADVERTISEMENT / SCROLL TO CONTINUE READING" flying-carpet ad (559px)
 ! that sits above the Trending carousel. Its empty frame is a 559px white band in the article body.
 themirror.com##div.fs-flying-carpet-v3
+
+! wealth.com.tw: the header ad band (gray bar above the nav) and the 300x250 / 300x600 gray ad placeholders
+! in the article body. Hashed CSS-module classes; with the ad script blocked the header slot div is never
+! created, so the band is matched by its own class rather than the gpt slot id.
+www.wealth.com.tw##div.E8FNb
+www.wealth.com.tw##div._FcTD

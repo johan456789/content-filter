@@ -499,3 +499,9 @@ kbro.com.tw##a.totop
 ! unwire.hk: the "you are reading" bar (#top-bar-post-title) that slides in under the fixed header
 ! after scrolling. A static id in the raw HTML; one match on mobile.
 unwire.hk###top-bar-post-title
+
+! wealth.com.tw (mobile article pages): the fixed bottom toolbar (font size / bookmark / copy link / share)
+! and the floating "TOP" button. Both use hashed CSS-module classes, so anchor on structure and the
+! back-to-top svg id. The toolbar is the only share group with three buttons before the share links.
+www.wealth.com.tw##div:has(> div > button + button + button + a[href*="/share"])
+www.wealth.com.tw##div:has(> div > button > svg > g[id="icon/back-to-top-copy"])
