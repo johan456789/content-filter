@@ -1,6 +1,6 @@
 #!/usr/bin/env bun
 import { chromium, devices } from 'playwright'
-import { readFileSync, writeFileSync, mkdirSync } from 'node:fs'
+import { readFileSync, writeFileSync, mkdirSync, existsSync } from 'node:fs'
 import path from 'node:path'
 
 const VIEWPORTS = {
@@ -23,8 +23,35 @@ for (const a of rest) {
 
 const json = (obj) => console.log(JSON.stringify(obj, null, 2))
 
+const BRAVE_PATHS = [
+  process.env.BRAVE_PATH,
+  '/usr/bin/brave-browser',
+  '/usr/bin/brave-browser-stable',
+  '/opt/brave.com/brave/brave',
+  '/Applications/Brave Browser.app/Contents/MacOS/Brave Browser',
+].filter(Boolean)
+
+// --brave drives the installed Brave so Shields blocks ads like it does for the user.
+// Playwright's default flags switch off component updates, which is how Brave fetches its
+// filter lists, so they are dropped, and we idle on an open tab while the lists download. A fresh
+// profile blocks nothing until they arrive.
 async function launch() {
-  return chromium.launch({ headless: true })
+  if (!flags.brave) return chromium.launch({ headless: true })
+  const executablePath = BRAVE_PATHS.find((p) => existsSync(p))
+  if (!executablePath) throw new Error('Brave not found. Set BRAVE_PATH to the browser binary.')
+  const browser = await chromium.launch({
+    executablePath,
+    args: ['--no-sandbox'],
+    headless: true,
+    ignoreDefaultArgs: ['--disable-component-update', '--disable-background-networking', '--disable-extensions', '--disable-default-apps', '--disable-sync'],
+  })
+  // Brave only starts fetching its lists once a tab is open, so idle on a throwaway one.
+  const warm = await browser.newContext()
+  await warm.newPage()
+  const waitSec = flags['brave-wait'] ? Number(flags['brave-wait']) : 45
+  await new Promise((r) => setTimeout(r, waitSec * 1000))
+  await warm.close()
+  return browser
 }
 
 function deviceDescriptor(name) {
@@ -311,13 +338,16 @@ async function main() {
       console.log(`harvest.mjs — DOM harvesting for uBlock rule generation
 
 Usage:
-  screenshot <url> [--viewport=desktop|mobile] [--device=<name>] [--full] [--out=dir] [--referer=<url>] [--accept-cookies]
+  screenshot <url> [--viewport=desktop|mobile] [--device=<name>] [--full] [--out=dir] [--referer=<url>] [--accept-cookies] [--brave]
       Screenshot the page at a fixed viewport (default desktop 1440x900, mobile 390x844).
       Also saves full page HTML next to the PNG. --full captures full-page screenshot.
       --device='Pixel 7' sends a phone UA + isMobile so mobile-only templates render;
       combine with --viewport to keep the fixed coordinate space.
       --referer sets the Referer header (bypasses some paywalls/meters).
       --accept-cookies clicks a common consent button before capturing.
+      --brave drives the installed Brave (BRAVE_PATH overrides the binary) so Shields blocks ads
+      like the user's browser. Waits 45s for filter lists; change with --brave-wait=<seconds>.
+      Also accepted by find and validate.
 
   find <url> <x> <y> [--viewport=desktop|mobile] [--device=<name>] [--scroll=pixels]
       Dump the ancestor chain of the element at pixel (x,y), deepest first.

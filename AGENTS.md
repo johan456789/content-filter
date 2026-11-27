@@ -25,6 +25,7 @@ bun scripts/harvest.mjs screenshot <url> --viewport=mobile --out=tmp/
 - Desktop = 1440×900, Mobile = 390×844, deviceScaleFactor 1 — **coordinates only map to these**.
 - Always take **both** — the annoying element is often mobile-only (sticky bars, mobile menus).
 - The script lazy-scrolls the page first so lazy-loaded content is present.
+- Add `--brave` (to `screenshot`, `find` and `validate`) to render in the installed Brave so Shields blocks ads like the user's browser. Without it a plain Chromium loads real ads where the user sees empty gray slots, and ad-slot markup the page only creates when its ad script runs is missing. It waits ~45s for Brave's filter lists to load. See `prompts/robust-rule.md` before anchoring on ad ids.
 - It also saves the **full page HTML** (`tmp/<domain>-<viewport>.html`) — read this to understand the page before designing selectors.
 - If the element might be below the fold, also take `--full` (full-page screenshot) for desktop.
 
